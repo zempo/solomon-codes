@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "FullStack Developer based in CA, USA.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "keywords": [
+    "solomon",
+    "zelenko",
+    "solomon",
+    "codes",
+    "sol",
+    "zempo"
+  ],
+  "author": "Solomon Zelenko",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
