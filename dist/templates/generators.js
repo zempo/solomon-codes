@@ -1,1 +1,0 @@
-let generators = `<h1>Generators*</h1>`

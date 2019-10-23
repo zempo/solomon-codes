@@ -1,1 +1,0 @@
-let blog = `<h1>Blog</h1>`

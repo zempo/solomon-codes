@@ -1,6 +1,6 @@
 # Solomon Codes
 
-_Live Site: Here_
+_Live Site: [Here](https://zempo.github.io/Solomon_Codes/)_
 
 ## Contact?
 
