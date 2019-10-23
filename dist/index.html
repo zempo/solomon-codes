@@ -1,51 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>SZ</title>
+    <title>SZ | Portfolio</title>
     <link rel="stylesheet" href="css/main.css" />
+    <script type="text/javascript" src="./scripts/redirect.js"></script>
+    <script type="text/javascript">
+      recieveRedirect();
+    </script>
+    <script type="text/javascript" src="./templates/home.js"></script>
+    <script type="text/javascript" src="./templates/blog.js"></script>
+    <script type="text/javascript" src="./templates/generators.js"></script>
+    <script type="text/javascript" src="./templates/projects.js"></script>
+    <script type="text/javascript" src="./templates/contact.js"></script>
   </head>
+
   <body>
-    <h1>Hello</h1>
+    <nav class="navbar">
+      <div class="navbar-left-item navbar-item">
+        <a href="#" onclick="onNavItemClick('/'); return false;">Solomon Zelenko</a>
+      </div>
+
+      <ul class="navbar-list">
+        <li class="navbar-item"><a href="#" onclick="onNavItemClick('/blog'); return false;">Blog</a></li>
+        <li class="navbar-item"><a href="#" onclick="onNavItemClick('/generators'); return false;">Generators</a></li>
+        <li class="navbar-item"><a href="#" onclick="onNavItemClick('/projects'); return false;">Projects</a></li>
+        <li class="navbar-item"><a href="#" onclick="onNavItemClick('/contact'); return false;">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="content"></div>
+    <script type="text/javascript" src="./scripts/index.js"></script>
   </body>
 </html>
-=======
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>SZ | Portfolio</title>
-  <link rel="stylesheet" href="css/main.css">
-  <script type="text/javascript" src="./scripts/redirect.js"></script>
-  <script type="text/javascript">recieveRedirect()</script>
-  <script type="text/javascript" src="./templates/home.js"></script>
-  <script type="text/javascript" src="./templates/blog.js"></script>
-  <script type="text/javascript" src="./templates/generators.js"></script>
-  <script type="text/javascript" src="./templates/projects.js"></script>
-  <script type="text/javascript" src="./templates/contact.js"></script>
-
-</head>
-
-<body>
-  <nav class="navbar">
-    <div class="navbar-left-item navbar-item"><a href="#" onclick="onNavItemClick('/'); return false;">Solomon
-        Zelenko</a>
-    </div>
-
-    <ul class="navbar-list">
-      <li class="navbar-item"><a href="#" onclick="onNavItemClick('/blog'); return false;">Blog</a></li>
-      <li class="navbar-item"><a href="#" onclick="onNavItemClick('/generators'); return false;">Generators</a></li>
-      <li class="navbar-item"><a href="#" onclick="onNavItemClick('/projects'); return false;">Projects</a></li>
-      <li class="navbar-item"><a href="#" onclick="onNavItemClick('/contact'); return false;">Contact</a></li>
-    </ul>
-  </nav>
-  <div id="content"></div>
-  <script type="text/javascript" src="./scripts/index.js"></script>
-</body>
-
-</html>
->>>>>>> 083e26c6933d6ee395565cd0e1a949ebe796088c
