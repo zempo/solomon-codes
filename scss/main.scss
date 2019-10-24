@@ -8,6 +8,7 @@ body {
   color: $dark-text;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 header {
@@ -24,13 +25,16 @@ nav {
 
 .menu {
   border: 1px solid red;
-  width: 70%;
+  width: 60%;
 }
 
 nav ul {
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
+}
+
+nav .menu-items {
 }
 
 h1 {
