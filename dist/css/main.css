@@ -11,8 +11,12 @@ header {
 
 nav {
   display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  flex-direction: row;
+  justify-content: space-evenly; }
+
+.menu {
+  border: 1px solid red;
+  width: 70%; }
 
 nav ul {
   list-style-type: none;
