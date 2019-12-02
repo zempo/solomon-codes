@@ -9,10 +9,10 @@ window.onload = () => {
       </div>
       <div class="menu-items">
         <ul>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="generators.html">Generators</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#about">Blog</a></li>
+          <li><a href="#snippets_lab">Generators</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
