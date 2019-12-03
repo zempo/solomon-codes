@@ -1,14 +1,14 @@
 $main-bg: rgb(246, 246, 246);
-$main-txt: rgb(0,0,0);
+$main-txt: rgb(0, 0, 0);
 
-$a-bg: rgb(243,243,243);
-$a-left-txt: rgb(0,0,0);
-$s-bg: rgb(243,243,243);
-$s-left-txt: rgb(0,0,0);
-$p-bg: rgb(243,243,243);
-$p-left-txt: rgb(0,0,0);
-$c-bg: rgb(243,243,243);
-$c-left-txt: rgb(0,0,0);
+$a-bg: rgb(243, 243, 243);
+$a-left-txt: rgb(0, 0, 0);
+$s-bg: rgb(243, 243, 243);
+$s-left-txt: rgb(0, 0, 0);
+$p-bg: rgb(243, 243, 243);
+$p-left-txt: rgb(0, 0, 0);
+$c-bg: rgb(243, 243, 243);
+$c-left-txt: rgb(0, 0, 0);
 
 body {
   background: $main-bg;
@@ -39,9 +39,6 @@ nav ul {
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
-}
-
-nav .menu-items {
 }
 
 h1 {
