@@ -26,3 +26,40 @@ nav ul {
 
 h1 {
   margin-top: 2rem; }
+
+main {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "h h" "al ar" "sl sr" "pl pr" "c c"; }
+
+.home {
+  grid-area: h; }
+
+.about-l {
+  grid-area: al; }
+
+.about-r {
+  grid-area: ar; }
+
+.snippets-l {
+  grid-area: sl; }
+
+.snippets-r {
+  grid-area: sr; }
+
+.project-l {
+  grid-area: pl; }
+
+.project-r {
+  grid-area: pr; }
+
+.contact {
+  grid-area: c; }
+
+.project-l, .project-r, .snippets-l, .snippets-r, .about-l, .about-r {
+  border: 2px solid black;
+  height: 100vh; }
+
+.project-r, .snippets-r, .about-r {
+  overflow-y: scroll; }
