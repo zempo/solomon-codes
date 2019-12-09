@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="css/primary.css" />
     <link rel="stylesheet" href="css/secondary.css" />
     <link rel="stylesheet" href="css/animation.css" />
-    <script type="text/javascript" src="./scripts/layout.js"></script>
-    <script type="text/javascript" src="./scripts/actions.js"></script>
+    <script type="text/javascript" src="./scripts/layout.js" async></script>
+    <script type="text/javascript" src="./scripts/actions.js" async></script>
   </head>
   <body>
     <header>
@@ -28,9 +28,9 @@
       </nav>
     </header>
     <main>
-      <section class="home">
+      <section id="home" class="home">
         <img class="logo-main" src="/images/logo.svg" alt="Solomon" />
-        <h2>Codes: <span class="cycle-words active">ReactJS</span></h2>
+        <h2>Codes <span class="cycle-words active">ReactJS</span></h2>
       </section>
       <section id="about" class="about-l">
         <h1>About</h1>
@@ -52,7 +52,7 @@
         <h1>Projects</h1>
       </section>
       <section class="project-r">
-        <!-- insert projects template, here  -->
+        <ol class="projects-list"></ol>
       </section>
       <section id="contact" class="left contact">
         <h1>Contact</h1>
