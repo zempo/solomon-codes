@@ -1,5 +1,5 @@
 body {
-  background: #f6f6f6;
+  background: #fafafa;
   color: black;
   margin: 0;
   padding: 0;
@@ -9,23 +9,6 @@ header {
   width: 100%;
   height: 5rem;
   border: 2px solid black; }
-
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly; }
-
-.menu {
-  border: 1px solid red;
-  width: 60%; }
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-evenly; }
-
-h1 {
-  margin-top: 2rem; }
 
 main {
   display: grid;
@@ -57,9 +40,16 @@ main {
 .contact {
   grid-area: c; }
 
-.project-l, .project-r, .snippets-l, .snippets-r, .about-l, .about-r {
+.project-l,
+.project-r,
+.snippets-l,
+.snippets-r,
+.about-l,
+.about-r {
   border: 2px solid black;
   height: 100vh; }
 
-.project-r, .snippets-r, .about-r {
+.project-r,
+.snippets-r,
+.about-r {
   overflow-y: scroll; }
