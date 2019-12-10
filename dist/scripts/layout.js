@@ -53,15 +53,6 @@ const currentProjects = [
 ];
 
 const loadProjects = projects => {
-  // {
-  //     title: "Aeropolis",
-  //     description:
-  //       "Aeropolis provides a live info for thousands of cities around the globe. Discover a city's air quality and location, read its local health news, and browse its wikipedia.",
-  //     tech: ["HTML / CSS, ", "jQuery, ", "and github pages"],
-  //     libs: ["AirVisual", "Leaflet.js", "News API", "Wikipedia API"],
-  //     repo: "https://github.com/zempo/aeropolis",
-  //     live: "https://zempo.github.io/Aeropolis/"
-  //   }
   let container = document.querySelector(".projects-list");
   let input = "";
   projects.forEach(proj => {
@@ -70,6 +61,16 @@ const loadProjects = projects => {
     <li>${proj.description}</li>
     <li>Tech: ${proj.tech.join("")}</li>
     <li>Libraries: ${proj.libs.join("")}</li>
+    <li>Source Code: 
+    <a href="${proj.repo}" target="_blank" rel="noopener noreferrer">
+    Here
+    </a>
+    </li>
+    <li>Live App: 
+    <a href="${proj.live}" target="_blank" rel="noopener noreferrer">
+    Here
+    </a>
+    </li>
     </ul>
     </li>`;
   });
