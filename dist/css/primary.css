@@ -62,7 +62,9 @@ main {
   grid-area: pr; }
 
 .contact {
-  grid-area: c; }
+  grid-area: c;
+  min-height: 80vh;
+  border: 2px solid black; }
 
 .project-l,
 .project-r,

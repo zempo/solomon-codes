@@ -95,6 +95,8 @@ main {
 
 .contact {
   grid-area: c;
+  min-height: 80vh;
+  border: 2px solid $main-txt;
 }
 
 .project-l,
