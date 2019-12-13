@@ -1,9 +1,32 @@
+@font-face {
+  font-family: SpartanMB;
+  src: url(/dist/fonts/SpartanMB-Extra-Bold.otf);
+  font-weight: bold; }
+
+@font-face {
+  font-family: SpartanMB;
+  src: url(/dist/fonts/SpartanMB-Regular.otf);
+  font-weight: normal; }
+
 body {
   background: #fafafa;
   color: black;
+  font-family: "SpartanMB";
+  font-weight: normal;
   margin: 0;
   padding: 0;
   width: 100%; }
+
+.big-h {
+  font-weight: bold;
+  font-size: calc(4.9rem + 1vw); }
+
+.lil-h {
+  font-weight: normal;
+  font-size: calc(3.5rem + 0.5vw); }
+
+h2 {
+  font-weight: normal; }
 
 header {
   width: 100%;
@@ -17,7 +40,8 @@ main {
   grid-template-areas: "h h" "al ar" "sl sr" "pl pr" "c c"; }
 
 .home {
-  grid-area: h; }
+  grid-area: h;
+  min-height: 100vh; }
 
 .about-l {
   grid-area: al; }
@@ -53,3 +77,18 @@ main {
 .snippets-r,
 .about-r {
   overflow-y: scroll; }
+
+@media screen and (max-width: 1400px) {
+  .big-h {
+    font-weight: bold;
+    font-size: calc(4rem + 1vw); } }
+
+@media screen and (max-width: 900px) {
+  .big-h {
+    font-weight: bold;
+    font-size: calc(3rem + 1vw); } }
+
+@media screen and (max-width: 600px) {
+  .big-h {
+    font-weight: bold;
+    font-size: calc(2rem + 1vw); } }
