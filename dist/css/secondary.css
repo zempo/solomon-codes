@@ -15,7 +15,7 @@ nav ul {
   justify-content: space-evenly; }
 
 .logo-main {
-  max-height: calc(5rem + 10vw);
+  max-height: calc(5rem + 7vw);
   max-width: 80%;
   -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
