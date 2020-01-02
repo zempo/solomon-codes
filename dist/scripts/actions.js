@@ -34,6 +34,5 @@ function scrollToAnchor(e, respond = null) {
 }
 
 window.onload = e => {
-  // refLinks();
   scrollTo();
 };
