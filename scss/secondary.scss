@@ -6,6 +6,7 @@ nav {
   justify-content: space-evenly;
   padding-right: 1rem;
   padding-left: 1rem;
+  font-size: large;
 }
 
 .menu {
@@ -14,7 +15,7 @@ nav {
 
 .menu ul {
   padding: 0;
-  margin: 1rem;
+  margin: 1.5rem 0;
 }
 
 .menu .nav-link a {
@@ -59,10 +60,23 @@ nav {
   color: black;
   font-weight: normal;
 }
+
 .home-icon {
   position: relative;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-weight: 500;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.home-icon:hover {
+  text-shadow: 1px 1px 2px rgb(54, 54, 54);
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 nav ul {
@@ -76,6 +90,8 @@ nav ul {
   max-height: calc(5rem + 7vw);
   padding-top: 4rem;
   max-width: 80%;
+  -o-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -moz-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
@@ -83,4 +99,12 @@ nav ul {
 .logo-mini {
   max-width: 20%;
   cursor: pointer;
+}
+
+// floating menu
+.menu-scroll {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  border: 1px solid red;
 }
