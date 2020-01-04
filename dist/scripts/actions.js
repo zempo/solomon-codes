@@ -36,13 +36,32 @@ function scrollToAnchor(e, respond = null) {
   }, 100);
 }
 
+// const linkTxt = [];
+let navMenu = document.querySelector(".menu");
+let navLinks = document.querySelectorAll(".nav-link a");
+let aboutSection = document.getElementById("about");
 function resizeNav() {
-  let navMenu = document.querySelector(".menu");
   // lower than 80 and if a particular class exists
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+  if (
+    document.body.scrollTop > aboutSection.offsetTop - 80 ||
+    document.documentElement.scrollTop > aboutSection.offsetTop - 80
+  ) {
     navMenu.classList.add("menu-scroll");
+    navLinks.forEach((node, i) => {
+      node.innerHTML = "..";
+    });
   } else {
     navMenu.classList.remove("menu-scroll");
+    navLinks.forEach((node, i) => {
+      let anchorVal;
+      let start = node.href.indexOf("#") + 1;
+      anchorVal = node.href.slice(start);
+      node.innerHTML = anchorVal;
+      // linkTxt.forEach(txt => {
+      //   console.log(txt, node.innerHTML);
+
+      // });
+    });
   }
 }
 

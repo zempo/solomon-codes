@@ -14,7 +14,8 @@ nav {
   margin: 1.5rem 0; }
 
 .menu .nav-link a {
-  position: relative; }
+  position: relative;
+  text-transform: capitalize; }
 
 .menu .nav-link a::after {
   content: "";
@@ -46,6 +47,36 @@ nav {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
+.menu-scroll .nav-link a::after {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  background: black;
+  bottom: -5px;
+  left: 50%;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+.menu-scroll .nav-link:hover a::after {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  background: black;
+  bottom: -5px;
+  left: -2.5%;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
 .menu a,
 .home-icon {
   text-decoration: none;
@@ -62,7 +93,7 @@ nav {
   transition: all 0.3s ease-out; }
 
 .home-icon:hover {
-  text-shadow: 1px 1px 2px #363636;
+  text-shadow: 1px 1px 3px #363636;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -88,10 +119,44 @@ nav ul {
 
 .menu-scroll {
   position: fixed;
-  top: 10%;
-  left: 10%;
-  border: 1px solid red;
+  top: 20%;
+  right: 20px;
+  width: auto;
   -o-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   -moz-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+
+.menu-scroll ul {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  width: auto;
+  position: relative; }
+
+.menu-scroll ul::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  background: black;
+  top: -5vh;
+  left: calc(50% - 1px); }
+
+.menu-scroll .nav-link {
+  border: 1px solid #131313;
+  border-radius: 50%;
+  background: white;
+  z-index: 2;
+  height: 12px;
+  width: 12px;
+  margin-bottom: 10vh; }
+
+.menu-scroll .nav-link:hover a {
+  color: white; }
+
+.menu-scroll .nav-link a {
+  color: rgba(255, 255, 255, 0);
+  height: 12px; }
