@@ -8,6 +8,10 @@
   src: url(/dist/fonts/SpartanMB-Regular.otf);
   font-weight: normal; }
 
+html,
+body {
+  height: auto; }
+
 body {
   background: #fafafa;
   color: black;
@@ -32,8 +36,7 @@ header {
   width: calc(100% - 4px);
   height: 5rem;
   border: 2px solid black;
-  outline: none;
-  margin-bottom: 4rem; }
+  outline: none; }
 
 main {
   display: grid;
@@ -45,7 +48,9 @@ main {
 .home {
   grid-area: h;
   outline: none;
-  min-height: 100vh; }
+  min-height: 100vh;
+  border-left: 2px solid black;
+  border-right: 2px solid black; }
 
 .about-l {
   grid-area: al; }

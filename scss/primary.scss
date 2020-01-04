@@ -22,6 +22,11 @@ $p-left-txt: rgb(0, 0, 0);
 $c-bg: rgb(243, 243, 243);
 $c-left-txt: rgb(0, 0, 0);
 
+html,
+body {
+  height: auto;
+}
+
 body {
   background: $main-bg;
   color: $main-txt;
@@ -50,7 +55,7 @@ header {
   height: 5rem;
   border: 2px solid $main-txt;
   outline: none;
-  margin-bottom: 4rem;
+  // margin-bottom: 4rem;
 }
 
 // main layout
@@ -71,6 +76,8 @@ main {
   grid-area: h;
   outline: none;
   min-height: 100vh;
+  border-left: 2px solid $main-txt;
+  border-right: 2px solid $main-txt;
 }
 
 .about-l {

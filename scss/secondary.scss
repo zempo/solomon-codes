@@ -88,7 +88,7 @@ nav ul {
 // heading
 .logo-main {
   max-height: calc(5rem + 7vw);
-  padding-top: 4rem;
+  padding-top: 8rem;
   max-width: 80%;
   -o-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   -moz-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -107,4 +107,8 @@ nav ul {
   top: 10%;
   left: 10%;
   border: 1px solid red;
+  -o-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -moz-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }

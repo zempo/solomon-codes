@@ -1,3 +1,6 @@
+let contactBtn = document.querySelector(".contact-btn");
+let resumeBtn = document.querySelector(".resume-btn");
+
 function scrollTo() {
   const links = document.querySelectorAll("nav a");
   links.forEach(each => (each.onclick = scrollToAnchor));
@@ -49,4 +52,14 @@ window.onload = e => {
 
 window.onscroll = e => {
   resizeNav();
+};
+
+contactBtn.onclick = e => {
+  e.preventDefault();
+  window.scrollBy({
+    top: document.body.scrollHeight,
+    left: 0,
+    behavior: "smooth"
+  });
+  // console.log(document.body.scrollHeight);
 };
