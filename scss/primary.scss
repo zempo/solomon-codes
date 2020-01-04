@@ -46,9 +46,10 @@ h2 {
 }
 
 header {
-  width: 100%;
+  width: calc(100% - 4px);
   height: 5rem;
   border: 2px solid $main-txt;
+  outline: none;
   margin-bottom: 4rem;
 }
 
@@ -56,6 +57,7 @@ header {
 main {
   display: grid;
   text-align: center;
+  outline: none;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "h h"
@@ -67,6 +69,7 @@ main {
 
 .home {
   grid-area: h;
+  outline: none;
   min-height: 100vh;
 }
 

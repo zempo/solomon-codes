@@ -33,6 +33,20 @@ function scrollToAnchor(e, respond = null) {
   }, 100);
 }
 
+function resizeNav() {
+  let navMenu = document.querySelector(".menu");
+  // lower than 80 and if a particular class exists
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    navMenu.classList.add("menu-scroll");
+  } else {
+    navMenu.classList.remove("menu-scroll");
+  }
+}
+
 window.onload = e => {
   scrollTo();
+};
+
+window.onscroll = e => {
+  resizeNav();
 };

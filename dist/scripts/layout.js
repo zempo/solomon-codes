@@ -131,7 +131,7 @@ function runCarousel() {
   // INJECT CSS
   var css = document.createElement("style");
   css.type = "text/css";
-  css.innerHTML = ".txt-carousel > .wrap { border-right: 0.08em solid #666 }";
+  css.innerHTML = ".txt-carousel > .wrap { border-right: 0.08em solid #000 }";
   document.body.appendChild(css);
 }
 

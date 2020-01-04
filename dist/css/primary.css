@@ -29,19 +29,22 @@ h2 {
   font-weight: normal; }
 
 header {
-  width: 100%;
+  width: calc(100% - 4px);
   height: 5rem;
   border: 2px solid black;
+  outline: none;
   margin-bottom: 4rem; }
 
 main {
   display: grid;
   text-align: center;
+  outline: none;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "h h" "al ar" "sl sr" "pl pr" "c c"; }
 
 .home {
   grid-area: h;
+  outline: none;
   min-height: 100vh; }
 
 .about-l {
