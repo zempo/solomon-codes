@@ -23,7 +23,8 @@ body {
 
 .big-h {
   font-weight: bold;
-  font-size: calc(4.9rem + 1vw); }
+  font-size: calc(4.9rem + 1vw);
+  margin-top: 40px; }
 
 .lil-h {
   font-weight: normal;
@@ -58,6 +59,9 @@ main {
 .about-r {
   grid-area: ar; }
 
+.about-r h2 {
+  text-align: center; }
+
 .snippets-l {
   grid-area: sl; }
 
@@ -88,7 +92,13 @@ main {
 .snippets-r,
 .about-r {
   overflow-y: scroll;
-  padding: 0 40px; }
+  padding: 0 80px;
+  text-align: justify; }
+
+.about-r h2:first-child,
+.snippets-r h2:first-child,
+.project-r h2:first-child {
+  margin-top: 80px; }
 
 @media screen and (max-width: 1400px) {
   .big-h {
