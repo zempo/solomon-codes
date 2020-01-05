@@ -1,5 +1,13 @@
 let contactBtn = document.querySelector(".contact-btn");
 let resumeBtn = document.querySelector(".resume-btn");
+// const linkTxt = [];
+let navMenu = document.querySelector(".menu");
+let navItems = document.querySelectorAll(".nav-link");
+let navLinks = document.querySelectorAll(".nav-link a");
+let aboutSection = document.getElementById("about");
+let snippetSection = document.getElementById("snippets");
+let projectSection = document.getElementById("project");
+let contactSection = document.getElementById("contact");
 
 function scrollTo() {
   const links = document.querySelectorAll("nav a");
@@ -36,16 +44,52 @@ function scrollToAnchor(e, respond = null) {
   }, 100);
 }
 
-// const linkTxt = [];
-let navMenu = document.querySelector(".menu");
-let navLinks = document.querySelectorAll(".nav-link a");
-let aboutSection = document.getElementById("about");
+function getCurrentSection() {
+  let aboutLink = document.querySelector('.nav-link a[href*="about"]');
+  let snippetLink = document.querySelector('.nav-link a[href*="snippet"]');
+  let projectLink = document.querySelector('.nav-link a[href*="project"]');
+  let contactLink = document.querySelector('.nav-link a[href*="contact"]');
+
+  if (window.pageYOffset < aboutSection.offsetTop) {
+    aboutLink.parentElement.style.backgroundColor = "white";
+    snippetLink.parentElement.style.backgroundColor = "white";
+    projectLink.parentElement.style.backgroundColor = "white";
+    contactLink.parentElement.style.backgroundColor = "white";
+  } else if (
+    window.pageYOffset >= aboutSection.offsetTop &&
+    window.pageYOffset < snippetSection.offsetTop
+  ) {
+    aboutLink.parentElement.style.backgroundColor = "black";
+    snippetLink.parentElement.style.backgroundColor = "white";
+    projectLink.parentElement.style.backgroundColor = "white";
+    contactLink.parentElement.style.backgroundColor = "white";
+  } else if (
+    window.pageYOffset >= snippetSection.offsetTop &&
+    window.pageYOffset < projectSection.offsetTop
+  ) {
+    aboutLink.parentElement.style.backgroundColor = "white";
+    snippetLink.parentElement.style.backgroundColor = "black";
+    projectLink.parentElement.style.backgroundColor = "white";
+    contactLink.parentElement.style.backgroundColor = "white";
+  } else if (
+    window.pageYOffset >= projectSection.offsetTop &&
+    window.pageYOffset < contactSection.offsetTop
+  ) {
+    aboutLink.parentElement.style.backgroundColor = "white";
+    snippetLink.parentElement.style.backgroundColor = "white";
+    projectLink.parentElement.style.backgroundColor = "black";
+    contactLink.parentElement.style.backgroundColor = "white";
+  } else {
+    aboutLink.parentElement.style.backgroundColor = "white";
+    snippetLink.parentElement.style.backgroundColor = "white";
+    projectLink.parentElement.style.backgroundColor = "white";
+    contactLink.parentElement.style.backgroundColor = "black";
+  }
+}
+
 function resizeNav() {
   // lower than 80 and if a particular class exists
-  if (
-    document.body.scrollTop > aboutSection.offsetTop - 80 ||
-    document.documentElement.scrollTop > aboutSection.offsetTop - 80
-  ) {
+  if (window.pageYOffset > aboutSection.offsetTop - 10) {
     navMenu.classList.add("menu-scroll");
     navLinks.forEach((node, i) => {
       node.innerHTML = "..";
@@ -57,10 +101,6 @@ function resizeNav() {
       let start = node.href.indexOf("#") + 1;
       anchorVal = node.href.slice(start);
       node.innerHTML = anchorVal;
-      // linkTxt.forEach(txt => {
-      //   console.log(txt, node.innerHTML);
-
-      // });
     });
   }
 }
@@ -71,6 +111,7 @@ window.onload = e => {
 
 window.onscroll = e => {
   resizeNav();
+  getCurrentSection();
 };
 
 contactBtn.onclick = e => {
