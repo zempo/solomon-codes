@@ -177,6 +177,81 @@ nav ul {
   width: 50%; }
 
 .prof-img {
-  max-width: 400px;
-  margin: auto;
-  text-align: center; }
+  margin-top: 80px;
+  margin-bottom: 40px;
+  margin-left: calc(50% - 125px);
+  width: 250px;
+  height: 407.13px;
+  background-image: url(/images/sol-about.jpg);
+  background-size: contain;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-top-right-radius: 5px; }
+
+.prof-img ul {
+  list-style-type: none;
+  padding-left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: hue; }
+
+.prof-img li {
+  height: 40px;
+  width: 20%;
+  position: relative;
+  left: -20%;
+  border: 1px solid rgba(0, 0, 0, 0); }
+
+.prof-img ul li:nth-child(1) {
+  background: #ababab;
+  border-top-left-radius: 5px; }
+
+.prof-img ul li:nth-child(2) {
+  background: #d82109; }
+
+.prof-img ul li:nth-child(3) {
+  background: #ee8c0d; }
+
+.prof-img ul li:nth-child(4) {
+  background: #dbd812; }
+
+.prof-img ul li:nth-child(5) {
+  background: #00a63f; }
+
+.prof-img ul li:nth-child(6) {
+  background: #00a69a; }
+
+.prof-img ul li:nth-child(7) {
+  background: #1012a5; }
+
+.prof-img ul li:nth-child(8) {
+  background: #ac0b96; }
+
+.prof-img ul li:nth-child(9) {
+  background: #5300a6; }
+
+.prof-img ul li:hover:nth-child(1) {
+  box-shadow: 150px 275px 0px 90px #000000; }
+
+.prof-img ul li:hover:nth-child(2) {
+  box-shadow: 150px 230px 0px 90px #e01506; }
+
+.prof-img ul li:hover:nth-child(3) {
+  box-shadow: 150px 191px 0px 90px #bb6d07; }
+
+.prof-img ul li:hover:nth-child(4) {
+  box-shadow: 150px 149px 0px 90px #ffff77; }
+
+.prof-img ul li:hover:nth-child(5) {
+  box-shadow: 150px 107px 0px 90px #00471d; }
+
+.prof-img ul li:hover:nth-child(6) {
+  box-shadow: 150px 65px 0px 90px #1c6881; }
+
+.prof-img ul li:hover:nth-child(7) {
+  box-shadow: 150px 23px 0px 90px #131daf; }
+
+.prof-img ul li:hover:nth-child(8) {
+  box-shadow: 150px -19px 0px 90px #9c1291; }
+
+.prof-img ul li:hover:nth-child(9) {
+  box-shadow: 150px -61px 0px 90px #5300a6; }
