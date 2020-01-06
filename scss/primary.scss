@@ -55,6 +55,7 @@ header {
   width: calc(100% - 4px);
   height: 5rem;
   border: 2px solid $main-txt;
+  border-top: none;
   outline: none;
   // margin-bottom: 4rem;
 }

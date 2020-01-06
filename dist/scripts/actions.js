@@ -6,7 +6,7 @@ let navItems = document.querySelectorAll(".nav-link");
 let navLinks = document.querySelectorAll(".nav-link a");
 let aboutSection = document.getElementById("about");
 let snippetSection = document.getElementById("snippets");
-let projectSection = document.getElementById("project");
+let projectSection = document.getElementById("projects");
 let contactSection = document.getElementById("contact");
 
 function scrollTo() {
@@ -50,13 +50,13 @@ function getCurrentSection() {
   let projectLink = document.querySelector('.nav-link a[href*="project"]');
   let contactLink = document.querySelector('.nav-link a[href*="contact"]');
 
-  if (window.pageYOffset < aboutSection.offsetTop) {
+  if (window.pageYOffset < aboutSection.offsetTop - 10) {
     aboutLink.parentElement.style.backgroundColor = "white";
     snippetLink.parentElement.style.backgroundColor = "white";
     projectLink.parentElement.style.backgroundColor = "white";
     contactLink.parentElement.style.backgroundColor = "white";
   } else if (
-    window.pageYOffset >= aboutSection.offsetTop &&
+    window.pageYOffset >= aboutSection.offsetTop - 10 &&
     window.pageYOffset < snippetSection.offsetTop
   ) {
     aboutLink.parentElement.style.backgroundColor = "black";
