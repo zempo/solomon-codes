@@ -163,5 +163,20 @@ nav ul {
 
 .menu-scroll .nav-link a {
   color: rgba(255, 255, 255, 0);
-  height: 15px;
+  height: 20px;
   width: 20px; }
+
+.skills {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+
+.skills ul {
+  list-style-type: none;
+  padding-left: 0;
+  width: 50%; }
+
+.prof-img {
+  max-width: 400px;
+  margin: auto;
+  text-align: center; }

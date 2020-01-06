@@ -92,7 +92,7 @@ function resizeNav() {
   if (window.pageYOffset > aboutSection.offsetTop - 10) {
     navMenu.classList.add("menu-scroll");
     navLinks.forEach((node, i) => {
-      node.innerHTML = "..";
+      node.innerHTML = "....";
     });
   } else {
     navMenu.classList.remove("menu-scroll");
