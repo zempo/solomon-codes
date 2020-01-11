@@ -1,6 +1,7 @@
+// top buttons
 let contactBtn = document.querySelector(".contact-btn");
 let resumeBtn = document.querySelector(".resume-btn");
-// const linkTxt = [];
+// navigation
 let navMenu = document.querySelector(".menu");
 let navItems = document.querySelectorAll(".nav-link");
 let navLinks = document.querySelectorAll(".nav-link a");
@@ -8,6 +9,8 @@ let aboutSection = document.getElementById("about");
 let snippetSection = document.getElementById("snippets");
 let projectSection = document.getElementById("projects");
 let contactSection = document.getElementById("contact");
+// contact form
+let contactForm = document.querySelector(".contact-form");
 
 function scrollTo() {
   const links = document.querySelectorAll("nav a");
@@ -104,6 +107,12 @@ function resizeNav() {
     });
   }
 }
+
+function handleContactForm(e) {
+  e.preventDefault();
+}
+
+contactForm.addEventListener("submit", handleContactForm);
 
 window.onload = e => {
   scrollTo();

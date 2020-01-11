@@ -60,6 +60,56 @@ header {
   // margin-bottom: 4rem;
 }
 
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+.btn {
+  font-size: 30px;
+  font-family: $font-1;
+  padding: 0.5rem 1.5rem;
+  background: none;
+  border: 2px solid $main-txt;
+  margin: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $main-txt;
+  color: $main-bg;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+.btn::before,
+.btn > span {
+  padding: 0.5rem 0;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.btn:hover::before {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.btn:hover > span {
+  transition: transform 0.3s;
+  // -webkit-transform: translate3d(0, 100%, 0);
+  // transform: translate3d(0, 100%, 0);
+  opacity: 0;
+}
+
 // main layout
 main {
   display: grid;

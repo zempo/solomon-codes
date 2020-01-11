@@ -35,11 +35,19 @@
           Codes &nbsp;<span
             class="txt-carousel"
             data-duration="300"
-            data-rotate='[ "ES 6", "React.js", "Node.js", "PostgreSQL", "SCSS", "HTML + CSS", "Mocha", "Jest", "Python ", "jQuery", "FrontEnd", "BackEnd" ]'
+            data-rotate='[ "ES 5", "ES 7", "React.js", "Node.js", "PostgreSQL", "SCSS", "HTML + CSS", "Mocha", "Jest", "Python ", "jQuery", "FrontEnd", "BackEnd" ]'
           ></span>
         </h1>
-        <button class="btn contact-btn">Contact</button>
-        <button class="btn resume-btn">Résumé</button>
+        <button class="btn contact-btn" data-text="Contact">
+          <span>
+            Contact
+          </span>
+        </button>
+        <button class="btn resume-btn" data-text="Résumé">
+          <span>
+            Résumé
+          </span>
+        </button>
       </section>
       <section id="about" class="about-l">
         <h1 class="big-h">About</h1>
@@ -159,10 +167,45 @@
       <section class="project-r">
         <ol class="projects-list"></ol>
       </section>
-      <section id="contact" class="left contact">
+      <section id="contact" class="contact">
         <h1 class="big-h">Contact</h1>
+        <form
+          action="https://formspree.io/mbjgllgk"
+          method="POST"
+          class="contact-form"
+        >
+          <label for="_replyto">
+            How might I reach you?
+            <br />
+            <input
+              type="text"
+              placeholder="ronald.recruiter@talent.com"
+              name="_replyto"
+            />
+          </label>
+          <br />
+          <label for="subject">
+            What would you like to talk about?
+            <br />
+            <input
+              type="text"
+              placeholder="Projects, E-Learning, Code, etc."
+              name="subject"
+            />
+          </label>
+          <br />
+          <label for="message">
+            What's the story?
+            <br />
+            <textarea
+              placeholder="Hello, I'm curious about..."
+              name="message"
+            ></textarea>
+          </label>
+          <br />
+          <button type="submit">Send</button>
+        </form>
       </section>
-      <section class="right contact"></section>
     </main>
   </body>
 </html>
