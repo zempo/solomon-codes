@@ -62,9 +62,15 @@ a:hover {
   background: black;
   color: #fafafa;
   height: 100%;
-  width: 100%;
+  width: 100%; }
+
+.resume-btn::before {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0); }
+
+.contact-btn::before {
+  -webkit-transform: translate3d(200%, 0, 0);
+  transform: translate3d(200%, 0, 0); }
 
 .btn::before,
 .btn > span {
@@ -79,8 +85,7 @@ a:hover {
   transform: translate3d(0, 0, 0); }
 
 .btn:hover > span {
-  transition: transform 0.3s;
-  opacity: 0; }
+  transition: transform 0.3s; }
 
 main {
   display: grid;

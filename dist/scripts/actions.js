@@ -11,6 +11,9 @@ let projectSection = document.getElementById("projects");
 let contactSection = document.getElementById("contact");
 // contact form
 let contactForm = document.querySelector(".contact-form");
+let email = document.getElementById("email");
+let subject = document.getElementById("sub");
+let message = document.getElementById("msg");
 
 function scrollTo() {
   const links = document.querySelectorAll("nav a");
@@ -110,6 +113,16 @@ function resizeNav() {
 
 function handleContactForm(e) {
   e.preventDefault();
+  let validEmail =
+    email.value.length > 5 &&
+    email.value.includes("@") &&
+    email.value.includes(".");
+
+  if (validEmail) {
+    console.log("valid email");
+  }
+
+  console.log("moo");
 }
 
 contactForm.addEventListener("submit", handleContactForm);
