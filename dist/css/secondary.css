@@ -256,3 +256,12 @@ nav ul {
 
 .prof-img ul li:hover:nth-child(9) {
   box-shadow: 150px -61px 0px 90px #5300a6; }
+
+.form-status {
+  width: 100%;
+  height: 30px;
+  background: green;
+  text-align: center; }
+
+.form-status:empty {
+  height: 0px; }

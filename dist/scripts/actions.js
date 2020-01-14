@@ -11,6 +11,7 @@ let projectSection = document.getElementById("projects");
 let contactSection = document.getElementById("contact");
 // contact form
 let contactForm = document.querySelector(".contact-form");
+let status = document.querySelector(".form-status");
 let email = document.getElementById("email");
 let subject = document.getElementById("sub");
 let message = document.getElementById("msg");
@@ -113,16 +114,38 @@ function resizeNav() {
 
 function handleContactForm(e) {
   e.preventDefault();
-  let validEmail =
-    email.value.length > 5 &&
-    email.value.includes("@") &&
-    email.value.includes(".");
+  status.innerHTML = "";
+  let eVal = email.value;
+  let sVal = subject.value;
+  let mVal = message.value;
+  let validEmail = eVal.length > 5 && eVal.includes("@") && eVal.includes(".");
+  let validSubject = sVal.length > 2;
+  let validMessage = mVal.length > 5;
 
-  if (validEmail) {
-    console.log("valid email");
+  if (!validEmail && validSubject && validMessage) {
+    status.innerHTML = `<p>Please enter your email in this format: <br/> yourname@example.com</p>`;
+  } else if (!validEmail && !validSubject && validMessage) {
+    status.innerHTML = `<p>Please enter your email in this format: <br/> yourname@example.com</p>
+      <p>Subject should be at least 3 characters.</p>`;
+  } else if (!validEmail && !validSubject && !validMessage) {
+    status.innerHTML = `<p>Please enter your email in this format: <br/> yourname@example.com</p>
+    <p>Subject should be at least 3 characters.</p>
+    <p>Message should be at least 5 characters.</p>`;
+  } else if (validEmail && !validSubject && !validMessage) {
+    status.innerHTML = `<p>Subject should be at least 3 characters.</p>
+    <p>Message should be at least 5 characters.</p>`;
+  } else if (validEmail && validSubject && !validMessage) {
+    status.innerHTML = `<p>Message should be at least 5 characters.</p>`;
+  } else if (validEmail && !validSubject && validMessage) {
+    status.innerHTML = `<p>Message should be at least 3 characters.</p>`;
+  } else {
+    status.innerHTML = `<p>Your Message Was Sent Successfully! <br/> We'll be in contact, shortly!</p>`;
   }
 
-  console.log("moo");
+  setTimeout(() => {
+    // clear notification
+    status.innerHTML = "";
+  }, 2000);
 }
 
 contactForm.addEventListener("submit", handleContactForm);

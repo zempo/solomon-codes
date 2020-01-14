@@ -309,3 +309,18 @@ nav ul {
 .prof-img ul li:hover:nth-child(9) {
   box-shadow: 150px -61px 0px 90px #5300a6;
 }
+
+// form submission
+
+// as wide as form
+.form-status {
+  width: 100%;
+  height: 30px;
+  background: green;
+  text-align: center;
+}
+
+.form-status:empty {
+  // background: rgb(255, 255, 255);
+  height: 0px;
+}
