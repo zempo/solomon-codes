@@ -105,7 +105,11 @@ main {
   grid-area: al; }
 
 .about-r {
-  grid-area: ar; }
+  grid-area: ar;
+  line-height: 1.75; }
+
+.about-r p {
+  margin-bottom: 40px; }
 
 .about-r h2 {
   text-align: center; }

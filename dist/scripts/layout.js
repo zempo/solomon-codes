@@ -1,6 +1,7 @@
 const currentProjects = [
   {
     title: "Aeropolis",
+    pics: ["", ""],
     description:
       "Aeropolis provides a live info for thousands of cities around the globe. Discover a city's air quality and location, read its local health news, and browse its wikipedia.",
     tech: ["HTML / CSS, ", "jQuery, ", "and github pages"],
@@ -10,6 +11,7 @@ const currentProjects = [
   },
   {
     title: "Above the Line",
+    pics: ["", ""],
     description:
       "Above the Line helps users create and download their own scripts/screenplays -- while taking care of the formatting. You can even customize your account's appearance whenever you want!",
     tech: [
@@ -29,6 +31,7 @@ const currentProjects = [
   },
   {
     title: "Just the Occasion",
+    pics: ["", ""],
     description:
       "jtO transforms greeting cards into a personal and social experience. You can create, react to, and customize your own greeting cards within minutes.",
     tech: [
@@ -55,6 +58,7 @@ const currentProjects = [
 const loadProjects = projects => {
   let container = document.querySelector(".projects-list");
   let input = "";
+  // set interval, accumulate a count, load an array of screenshots for projects
   projects.forEach(proj => {
     input += `<li class="project">${proj.title}
     <ul>

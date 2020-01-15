@@ -166,6 +166,19 @@ nav ul {
   height: 20px;
   width: 20px; }
 
+.keyword-pink {
+  color: #e02664;
+  font-weight: bold; }
+
+.keyword-purple,
+.keyword-purple a {
+  color: #663274;
+  font-weight: bold; }
+
+.keyword-blue {
+  color: #192274;
+  font-weight: bold; }
+
 .skills {
   width: 100%;
   display: flex;

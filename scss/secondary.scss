@@ -190,7 +190,35 @@ nav ul {
   width: 20px;
 }
 
-// skills
+// about
+// .keyword {
+//   font-weight: bold;
+// }
+
+.keyword-pink {
+  color: rgb(224, 38, 100);
+  font-weight: bold;
+}
+
+.keyword-purple,
+.keyword-purple a {
+  color: #663274;
+  font-weight: bold;
+}
+
+// .keyword-red {
+//   color: #9e1b1b;
+// }
+
+.keyword-blue {
+  color: #192274;
+  font-weight: bold;
+}
+
+// .keyword-green {
+//   color: #196b39;
+// }
+
 .skills {
   width: 100%;
   display: flex;
@@ -202,10 +230,6 @@ nav ul {
   padding-left: 0;
   width: 50%;
 }
-
-// .prof-img {
-//   max-width: 250px;
-// }
 
 .prof-img {
   margin-top: 80px;
