@@ -55,6 +55,41 @@ const currentProjects = [
   }
 ];
 
+const currentSnippets = [
+  {
+    type: "article",
+    title: "The Expedited Eureka",
+    // how one can expedite their creative process by detoxing from tech and exploring other disciplines.
+    // in short, an excuse to have fun and fight against burnout
+    link: "",
+  },
+  {
+    type: "animation",
+    title: 'Card Animation',
+    link: "",
+
+  },
+  {
+    type: "algo",
+    title: "Memoize Fibbonachi",
+    link: ""
+  },
+  {
+    type: "animation",
+    title: "Cloud Animation",
+    link: ""
+  },
+  {
+    type: "algo",
+    title: "Merge and Sort",
+    link: ""
+  },
+  {
+    type: "animation",
+    title: ""
+  }
+]
+
 const loadProjects = projects => {
   let container = document.querySelector(".projects-list");
   let input = "";
