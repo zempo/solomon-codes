@@ -1,7 +1,7 @@
 const currentProjects = [
   {
     title: "Aeropolis",
-    pics: ["", ""],
+    pics: ["air-1.png", "air-2.png"],
     description:
       "Aeropolis provides a live info for thousands of cities around the globe. Discover a city's air quality and location, read its local health news, and browse its wikipedia.",
     tech: ["HTML / CSS, ", "jQuery, ", "and github pages"],
@@ -11,7 +11,7 @@ const currentProjects = [
   },
   {
     title: "Above the Line",
-    pics: ["", ""],
+    pics: ["atl-1.png", "atl-2.png"],
     description:
       "Above the Line helps users create and download their own scripts/screenplays -- while taking care of the formatting. You can even customize your account's appearance whenever you want!",
     tech: [
@@ -31,7 +31,7 @@ const currentProjects = [
   },
   {
     title: "Just the Occasion",
-    pics: ["", ""],
+    pics: ["jto-1.png", "jto-2.png"],
     description:
       "jtO transforms greeting cards into a personal and social experience. You can create, react to, and customize your own greeting cards within minutes.",
     tech: [
@@ -60,7 +60,11 @@ const loadProjects = projects => {
   let input = "";
   // set interval, accumulate a count, load an array of screenshots for projects
   projects.forEach(proj => {
-    input += `<li class="project">${proj.title}
+    input += `<li class="proj">
+    <p>${proj.title}</p>
+    <div class="proj-img-wrapper">
+    <img class="proj-img" src="/images/${proj.pics[0]}" alt="${proj.title} image"/>
+    </div>
     <ul>
     <li>${proj.description}</li>
     <li>Tech: ${proj.tech.join("")}</li>

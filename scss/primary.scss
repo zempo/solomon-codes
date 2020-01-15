@@ -172,6 +172,10 @@ main {
   grid-area: pr;
 }
 
+.project-r .proj-img {
+  max-width: 100%;
+}
+
 .contact {
   grid-area: c;
   min-height: 100vh;
