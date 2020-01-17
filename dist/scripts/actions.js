@@ -9,6 +9,9 @@ let aboutSection = document.getElementById("about");
 let snippetSection = document.getElementById("snippets");
 let projectSection = document.getElementById("projects");
 let contactSection = document.getElementById("contact");
+// Resume
+let modal = document.getElementById("resumeModal");
+let span = document.getElementsByClassName("close")[0];
 // contact form
 let contactForm = document.querySelector(".contact-form");
 let status = document.querySelector(".form-status");
@@ -176,16 +179,35 @@ window.onresize = e => {
 
 contactBtn.onclick = e => {
   e.preventDefault();
-  // contactSection = document.getElementById("contact");
+  contactBtn.focus();
+  contactSection = document.getElementById("contact");
   window.scrollBy({
-    top: document.body.scrollHeight - 5,
+    top: contactSection.offsetTop - 1,
     left: 0,
     behavior: "smooth"
   });
-  // window.scrollBy({
-  //   top: document.body.scrollHeight,
-  //   left: 0,
-  //   behavior: "smooth"
-  // });
-  // console.log(document.body.scrollHeight);
+  const checkIfDone = setInterval(function() {
+    const atBottom =
+      window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+
+    if (distanceToTop(contactSection) === 0 || atBottom) {
+      contactSection.tabIndex = "-1";
+      contactSection.focus();
+      window.history.pushState("", "", targetID);
+      clearInterval(checkIfDone);
+    }
+  }, 100);
+};
+
+resumeBtn.onclick = e => {
+  e.preventDefault();
+  modal.style.display = "block";
+};
+span.onclick = e => {
+  modal.style.display = "none";
+};
+window.onclick = e => {
+  if (e.target == modal) {
+    modal.style.display = "none";
+  }
 };

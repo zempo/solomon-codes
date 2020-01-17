@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/primary.css" />
     <link rel="stylesheet" href="css/secondary.css" />
     <link rel="stylesheet" href="css/animation.css" />
+    <link rel="stylesheet" href="css/modal.css" />
     <script type="text/javascript" src="./scripts/layout.js" async></script>
     <script type="text/javascript" src="./scripts/actions.js" async></script>
   </head>
@@ -48,6 +49,17 @@
             Résumé
           </span>
         </button>
+        <div id="resumeModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe
+              src="/images/Resume.pdf"
+              frameborder="0"
+              width="100%"
+              height="500px"
+            ></iframe>
+          </div>
+        </div>
       </section>
       <section id="about" class="about-l">
         <h1 class="big-h">About</h1>
