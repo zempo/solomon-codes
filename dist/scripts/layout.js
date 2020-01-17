@@ -61,13 +61,12 @@ const currentSnippets = [
     title: "The Expedited Eureka",
     // how one can expedite their creative process by detoxing from tech and exploring other disciplines.
     // in short, an excuse to have fun and fight against burnout
-    link: "",
+    link: ""
   },
   {
     type: "animation",
-    title: 'Card Animation',
-    link: "",
-
+    title: "Card Animation",
+    link: ""
   },
   {
     type: "algo",
@@ -88,17 +87,20 @@ const currentSnippets = [
     type: "animation",
     title: ""
   }
-]
+];
 
 const loadProjects = projects => {
   let container = document.querySelector(".projects-list");
   let input = "";
-  // set interval, accumulate a count, load an array of screenshots for projects
   projects.forEach(proj => {
     input += `<li class="proj">
-    <p>${proj.title}</p>
-    <div class="proj-img-wrapper">
-    <img class="proj-img" src="/images/${proj.pics[0]}" alt="${proj.title} image"/>
+    <h2>${proj.title}</h2>
+    <div class="proj-img-wrapper-2">
+    <div class="proj-img-wrapper-1">
+    <img class="proj-img" src="/images/${proj.pics[0]}" alt="${
+      proj.title
+    } image"/>
+    </div>
     </div>
     <ul>
     <li>${proj.description}</li>
@@ -118,9 +120,27 @@ const loadProjects = projects => {
     </li>`;
   });
   container.innerHTML = input;
+  // projects section
+  let projImgs = document.querySelectorAll(".proj-img");
+  projImgs.forEach((pImg, i) => {
+    pImg.addEventListener("mouseover", e => {
+      pImg.setAttribute("src", `/images/${currentProjects[i].pics[1]}`);
+      pImg.classList.add("pulse");
+      setTimeout(() => {
+        pImg.classList.remove("pulse");
+      }, 300);
+    });
+    pImg.addEventListener("mouseout", e => {
+      pImg.setAttribute("src", `/images/${currentProjects[i].pics[0]}`);
+      pImg.classList.add("pulse");
+      setTimeout(() => {
+        pImg.classList.remove("pulse");
+      }, 300);
+    });
+  });
 };
 
-var TextCarousel = function(el, toRotate, duration) {
+const TextCarousel = function(el, toRotate, duration) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -162,7 +182,7 @@ TextCarousel.prototype.tick = function() {
   }, delta);
 };
 
-function runCarousel() {
+const runCarousel = () => {
   var elements = document.getElementsByClassName("txt-carousel");
   for (var i = 0; i < elements.length; i++) {
     var toRotate = elements[i].getAttribute("data-rotate");
@@ -176,7 +196,7 @@ function runCarousel() {
   css.type = "text/css";
   css.innerHTML = ".txt-carousel > .wrap { border-right: 0.08em solid #000 }";
   document.body.appendChild(css);
-}
+};
 
 runCarousel();
 loadProjects(currentProjects);

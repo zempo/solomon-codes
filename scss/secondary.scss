@@ -1,5 +1,8 @@
-// nav
+$ubuntu-dark: #3d3a3a;
+$ubuntu-light: #f7f7f7;
+$ubuntu-x: #eb6637;
 
+// nav
 nav {
   display: flex;
   flex-direction: row;
@@ -102,18 +105,10 @@ nav {
   position: relative;
   margin-top: 1.5rem;
   font-weight: 500;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.home-icon:hover {
-  text-shadow: 1px 1px 3px rgb(54, 54, 54);
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  // -moz-transition: all 0.3s ease-out;
+  // -o-transition: all 0.3s ease-out;
+  // -webkit-transition: all 0.3s ease-out;
+  // transition: all 0.3s ease-out;
 }
 
 nav ul {
@@ -334,10 +329,114 @@ nav ul {
   box-shadow: 150px -61px 0px 90px #5300a6;
 }
 
-// projects 
+// projects
+// projects.forEach(proj => {
+//   input += `<li class="proj">
+//   <p>${proj.title}</p>
+//   <div class="proj-img-wrapper">
+//   <img class="proj-img" src="/images/${proj.pics[0]}" alt="${
+//     proj.title
+//   } image"/>
+//   </div>
+//   <ul>
+//   <li>${proj.description}</li>
+//   <li>Tech: ${proj.tech.join("")}</li>
+//   <li>Libraries: ${proj.libs.join("")}</li>
+//   <li>Source Code:
+//   <a href="${proj.repo}" target="_blank" rel="noopener noreferrer">
+//   Here
+//   </a>
+//   </li>
+//   <li>Live App:
+//   <a href="${proj.live}" target="_blank" rel="noopener noreferrer">
+//   Here
+//   </a>
+//   </li>
+//   </ul>
+//   </li>`;
+// });
 
+// .projects-list {
+// }
+.proj {
+  list-style-type: none;
+  position: relative;
+}
+.proj h2 {
+  text-align: center;
+}
 
+.proj-img-wrapper-1 {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+}
 
+.proj-img-wrapper-2 {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+}
+
+.proj-img-wrapper-1::after {
+  content: "";
+  background: $ubuntu-x;
+  color: $ubuntu-light;
+  display: inline-block;
+  vertical-align: center;
+  position: absolute;
+  top: 4px;
+  right: -5px;
+  height: 12px;
+  width: 12px;
+  text-align: center;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+}
+
+.proj-img-wrapper-1::before {
+  content: "";
+  background: $ubuntu-dark;
+  color: $ubuntu-light;
+  display: inline-block;
+  vertical-align: center;
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  height: 6px;
+  width: 6px;
+  text-align: center;
+  border: 1px solid $ubuntu-light;
+  // border-radius: 50%;
+}
+
+.proj-img-wrapper-2::before {
+  content: "x";
+  color: $ubuntu-light;
+  display: inline-block;
+  vertical-align: center;
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  height: 5px;
+  width: 5px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+}
+
+.project-r .proj-img {
+  max-width: 100%;
+  border: 5px solid $ubuntu-dark;
+  border-top: 20px solid $ubuntu-dark;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
 // form submission
 
 // as wide as form
@@ -352,4 +451,3 @@ nav ul {
   // background: rgb(255, 255, 255);
   height: 0px;
 }
- 

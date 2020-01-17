@@ -36,7 +36,11 @@ function scrollToAnchor(e, respond = null) {
 
   const originalTop = distanceToTop(targetAnchor);
 
-  window.scrollBy({ top: originalTop, left: 0, behavior: "smooth" });
+  if (targetID === "#contact") {
+    window.scrollBy({ top: originalTop, left: 0, behavior: "smooth" });
+  } else {
+    window.scrollBy({ top: originalTop + 2, left: 0, behavior: "smooth" });
+  }
 
   const checkIfDone = setInterval(function() {
     const atBottom =
@@ -51,7 +55,7 @@ function scrollToAnchor(e, respond = null) {
   }, 100);
 }
 
-function getCurrentSection() {
+const getCurrentSection = () => {
   let aboutLink = document.querySelector('.nav-link a[href*="about"]');
   let snippetLink = document.querySelector('.nav-link a[href*="snippet"]');
   let projectLink = document.querySelector('.nav-link a[href*="project"]');
@@ -92,9 +96,9 @@ function getCurrentSection() {
     projectLink.parentElement.style.backgroundColor = "white";
     contactLink.parentElement.style.backgroundColor = "black";
   }
-}
+};
 
-function resizeNav() {
+const resizeNav = () => {
   // lower than 80 and if a particular class exists
   if (window.pageYOffset > aboutSection.offsetTop - 10) {
     navMenu.classList.add("menu-scroll");
@@ -110,7 +114,7 @@ function resizeNav() {
       node.innerHTML = anchorVal;
     });
   }
-}
+};
 
 function handleContactForm(e) {
   status.innerHTML = "";
@@ -127,20 +131,20 @@ function handleContactForm(e) {
   } else if (!validEmail && !validSubject && validMessage) {
     e.preventDefault();
     status.innerHTML = `<p>Please enter your email in this format: <br/> yourname@example.com</p>
-      <p>Subject should be at least 3 characters.</p>`;
+          <p>Subject should be at least 3 characters.</p>`;
   } else if (!validEmail && validSubject && !validMessage) {
     e.preventDefault();
     status.innerHTML = `<p>Please enter your email in this format: <br/> yourname@example.com</p>
-      <p>Message should be at least 5 characters.</p>`;
+          <p>Message should be at least 5 characters.</p>`;
   } else if (!validEmail && !validSubject && !validMessage) {
     e.preventDefault();
     status.innerHTML = `<p>Please enter your email in this format: <br/> yourname@example.com</p>
-    <p>Subject should be at least 3 characters.</p>
-    <p>Message should be at least 5 characters.</p>`;
+          <p>Subject should be at least 3 characters.</p>
+          <p>Message should be at least 5 characters.</p>`;
   } else if (validEmail && !validSubject && !validMessage) {
     e.preventDefault();
     status.innerHTML = `<p>Subject should be at least 3 characters.</p>
-    <p>Message should be at least 5 characters.</p>`;
+          <p>Message should be at least 5 characters.</p>`;
   } else if (validEmail && validSubject && !validMessage) {
     e.preventDefault();
     status.innerHTML = `<p>Message should be at least 5 characters.</p>`;
@@ -168,12 +172,26 @@ window.onscroll = e => {
   getCurrentSection();
 };
 
+window.onresize = e => {
+  aboutSection = document.getElementById("about");
+  snippetSection = document.getElementById("snippets");
+  projectSection = document.getElementById("projects");
+  contactSection = document.getElementById("contact");
+  getCurrentSection();
+};
+
 contactBtn.onclick = e => {
   e.preventDefault();
+  contactSection = document.getElementById("contact");
   window.scrollBy({
-    top: document.body.scrollHeight,
+    top: contactSection.offsetTop,
     left: 0,
     behavior: "smooth"
   });
+  // window.scrollBy({
+  //   top: document.body.scrollHeight,
+  //   left: 0,
+  //   behavior: "smooth"
+  // });
   // console.log(document.body.scrollHeight);
 };

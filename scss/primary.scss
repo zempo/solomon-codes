@@ -42,6 +42,7 @@ body {
   font-size: calc(4.9rem + 1vw);
   margin-top: 40px;
 }
+
 .lil-h {
   font-weight: normal;
   font-size: calc(3.5rem + 0.5vw);
@@ -49,6 +50,7 @@ body {
 
 h2 {
   font-weight: normal;
+  font-size: 40px;
 }
 
 header {
@@ -172,10 +174,6 @@ main {
   grid-area: pr;
 }
 
-.project-r .proj-img {
-  max-width: 100%;
-}
-
 .contact {
   grid-area: c;
   min-height: 100vh;
@@ -210,6 +208,34 @@ main {
   .big-h {
     font-weight: bold;
     font-size: calc(4rem + 1vw);
+  }
+  main {
+    display: grid;
+    text-align: center;
+    outline: none;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "h h"
+      "al al"
+      "ar ar"
+      "sl sl"
+      "sr sr"
+      "pl pl"
+      "pr pr"
+      "c c";
+  }
+
+  .project-l,
+  .snippets-l,
+  .about-l {
+    border: 2px solid black;
+    height: auto;
+    border-bottom: none;
+  }
+
+  .project-l,
+  .snippets-l {
+    border-top: none;
   }
 }
 

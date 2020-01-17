@@ -90,18 +90,7 @@ nav {
 .home-icon {
   position: relative;
   margin-top: 1.5rem;
-  font-weight: 500;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; }
-
-.home-icon:hover {
-  text-shadow: 1px 1px 3px #363636;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; }
+  font-weight: 500; }
 
 nav ul {
   list-style-type: none;
@@ -269,6 +258,78 @@ nav ul {
 
 .prof-img ul li:hover:nth-child(9) {
   box-shadow: 150px -61px 0px 90px #5300a6; }
+
+.proj {
+  list-style-type: none;
+  position: relative; }
+
+.proj h2 {
+  text-align: center; }
+
+.proj-img-wrapper-1 {
+  cursor: pointer;
+  position: relative;
+  width: 100%; }
+
+.proj-img-wrapper-2 {
+  cursor: pointer;
+  position: relative;
+  width: 100%; }
+
+.proj-img-wrapper-1::after {
+  content: "";
+  background: #eb6637;
+  color: #f7f7f7;
+  display: inline-block;
+  vertical-align: center;
+  position: absolute;
+  top: 4px;
+  right: -5px;
+  height: 12px;
+  width: 12px;
+  text-align: center;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: 50%; }
+
+.proj-img-wrapper-1::before {
+  content: "";
+  background: #3d3a3a;
+  color: #f7f7f7;
+  display: inline-block;
+  vertical-align: center;
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  height: 6px;
+  width: 6px;
+  text-align: center;
+  border: 1px solid #f7f7f7; }
+
+.proj-img-wrapper-2::before {
+  content: "x";
+  color: #f7f7f7;
+  display: inline-block;
+  vertical-align: center;
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  height: 5px;
+  width: 5px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1; }
+
+.project-r .proj-img {
+  max-width: 100%;
+  border: 5px solid #3d3a3a;
+  border-top: 20px solid #3d3a3a;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
 
 .form-status {
   width: 100%;
