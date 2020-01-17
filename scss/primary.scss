@@ -56,7 +56,7 @@ h2 {
 header {
   width: calc(100% - 4px);
   height: 5rem;
-  border: 2px solid $main-txt;
+  // border: 2px solid $main-txt;
   border-top: none;
   outline: none;
   // margin-bottom: 4rem;
@@ -137,8 +137,9 @@ main {
   grid-area: h;
   outline: none;
   min-height: 100vh;
-  border-left: 2px solid $main-txt;
-  border-right: 2px solid $main-txt;
+  border-left: 1px solid $main-txt;
+  border-right: 1px solid $main-txt;
+  // border-bottom: 1px solid $main-txt;
 }
 
 .about-l {
@@ -176,8 +177,9 @@ main {
 
 .contact {
   grid-area: c;
-  min-height: 100vh;
-  border: 2px solid $main-txt;
+  height: 105vh;
+  border-left: 1px solid $main-txt;
+  border-right: 1px solid $main-txt;
 }
 
 .project-l,
@@ -186,8 +188,8 @@ main {
 .snippets-r,
 .about-l,
 .about-r {
-  border: 2px solid black;
-  height: 100vh;
+  border: 1px solid black;
+  height: 105vh;
 }
 
 .project-r,
@@ -207,7 +209,8 @@ main {
 @media screen and (max-width: 1400px) {
   .big-h {
     font-weight: bold;
-    font-size: calc(4rem + 1vw);
+    font-size: calc(6rem + 1vw);
+    margin: 1rem;
   }
   main {
     display: grid;
@@ -226,9 +229,18 @@ main {
   }
 
   .project-l,
+  .project-r,
+  .snippets-l,
+  .snippets-r,
+  .about-l,
+  .about-r {
+    // border: none;
+    border: 1px solid black;
+  }
+
+  .project-l,
   .snippets-l,
   .about-l {
-    border: 2px solid black;
     height: auto;
     border-bottom: none;
   }

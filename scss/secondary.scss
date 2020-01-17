@@ -378,6 +378,12 @@ nav ul {
   width: 100%;
 }
 
+.pulse::after {
+  width: 100px;
+  height: 100px;
+  background: $ubuntu-dark;
+}
+
 .proj-img-wrapper-1::after {
   content: "";
   background: $ubuntu-x;
@@ -385,10 +391,10 @@ nav ul {
   display: inline-block;
   vertical-align: center;
   position: absolute;
-  top: 4px;
+  top: 5px;
   right: -5px;
-  height: 12px;
-  width: 12px;
+  height: 14px;
+  width: 14px;
   text-align: center;
   border: 0px solid rgba(0, 0, 0, 0);
   border-radius: 50%;
@@ -401,8 +407,8 @@ nav ul {
   display: inline-block;
   vertical-align: center;
   position: absolute;
-  top: 6px;
-  right: 10px;
+  top: 8px;
+  right: 15px;
   height: 6px;
   width: 6px;
   text-align: center;
@@ -416,8 +422,8 @@ nav ul {
   display: inline-block;
   vertical-align: center;
   position: absolute;
-  top: 6px;
-  right: 10px;
+  top: 3px;
+  right: 0px;
   height: 5px;
   width: 5px;
   font-size: 10px;
@@ -426,10 +432,25 @@ nav ul {
   z-index: 1;
 }
 
+.proj-img-wrapper-2::after {
+  content: "";
+  color: $ubuntu-light;
+  display: inline-block;
+  vertical-align: center;
+  position: absolute;
+  top: 8px;
+  right: 30px;
+  height: 5px;
+  width: 6px;
+  border-bottom: 1px solid $ubuntu-light;
+  text-align: center;
+  z-index: 1;
+}
+
 .project-r .proj-img {
   max-width: 100%;
   border: 5px solid $ubuntu-dark;
-  border-top: 20px solid $ubuntu-dark;
+  border-top: 24px solid $ubuntu-dark;
   -webkit-border-top-left-radius: 5px;
   -webkit-border-top-right-radius: 5px;
   -moz-border-radius-topleft: 5px;

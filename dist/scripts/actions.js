@@ -18,7 +18,9 @@ let message = document.getElementById("msg");
 
 function scrollTo() {
   const links = document.querySelectorAll("nav a");
-  links.forEach(each => (each.onclick = scrollToAnchor));
+  links.forEach(link => {
+    link.onclick = scrollToAnchor;
+  });
 }
 
 function scrollToAnchor(e, respond = null) {
@@ -34,13 +36,9 @@ function scrollToAnchor(e, respond = null) {
 
   if (!targetAnchor) return;
 
-  const originalTop = distanceToTop(targetAnchor);
+  let originalTop = distanceToTop(targetAnchor);
 
-  if (targetID === "#contact") {
-    window.scrollBy({ top: originalTop, left: 0, behavior: "smooth" });
-  } else {
-    window.scrollBy({ top: originalTop + 2, left: 0, behavior: "smooth" });
-  }
+  window.scrollBy({ top: originalTop + 1, left: 0, behavior: "smooth" });
 
   const checkIfDone = setInterval(function() {
     const atBottom =
@@ -84,7 +82,7 @@ const getCurrentSection = () => {
     contactLink.parentElement.style.backgroundColor = "white";
   } else if (
     window.pageYOffset >= projectSection.offsetTop &&
-    window.pageYOffset < contactSection.offsetTop
+    window.pageYOffset < contactSection.offsetTop - 1
   ) {
     aboutLink.parentElement.style.backgroundColor = "white";
     snippetLink.parentElement.style.backgroundColor = "white";
@@ -173,18 +171,14 @@ window.onscroll = e => {
 };
 
 window.onresize = e => {
-  aboutSection = document.getElementById("about");
-  snippetSection = document.getElementById("snippets");
-  projectSection = document.getElementById("projects");
-  contactSection = document.getElementById("contact");
   getCurrentSection();
 };
 
 contactBtn.onclick = e => {
   e.preventDefault();
-  contactSection = document.getElementById("contact");
+  // contactSection = document.getElementById("contact");
   window.scrollBy({
-    top: contactSection.offsetTop,
+    top: document.body.scrollHeight - 5,
     left: 0,
     behavior: "smooth"
   });

@@ -3,7 +3,7 @@ const currentProjects = [
     title: "Aeropolis",
     pics: ["air-1.png", "air-2.png"],
     description:
-      "Aeropolis provides a live info for thousands of cities around the globe. Discover a city's air quality and location, read its local health news, and browse its wikipedia.",
+      "Aeropolis provides live air quality values for thousands of cities around the globe. Discover a city's air quality, read local health news, and browse the wikipedia.",
     tech: ["HTML / CSS, ", "jQuery, ", "and github pages"],
     libs: ["AirVisual", "Leaflet.js", "News API", "Wikipedia API"],
     repo: "https://github.com/zempo/aeropolis",
