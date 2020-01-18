@@ -4,7 +4,7 @@ nav {
   justify-content: space-evenly;
   padding-right: 1rem;
   padding-left: 1rem;
-  font-size: large; }
+  font-size: 20px; }
 
 .menu {
   width: 60%;
@@ -31,10 +31,10 @@ nav {
   background: black;
   bottom: -5px;
   left: 50%;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  -moz-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  -o-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  -webkit-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1); }
 
 .menu .nav-link:hover a::after {
   content: "";
@@ -46,10 +46,10 @@ nav {
   background: black;
   bottom: -5px;
   left: -2.5%;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  -moz-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  -o-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  -webkit-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1); }
 
 .menu-scroll .nav-link a::after {
   content: "";
@@ -61,10 +61,10 @@ nav {
   background: black;
   bottom: -5px;
   left: 50%;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  -moz-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  -o-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  -webkit-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1); }
 
 .menu-scroll .nav-link:hover a::after {
   content: "";
@@ -76,10 +76,10 @@ nav {
   background: black;
   bottom: -5px;
   left: -2.5%;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  -moz-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  -o-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  -webkit-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1); }
 
 .menu a,
 .home-icon {
@@ -105,10 +105,6 @@ nav ul {
   -moz-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
-
-.logo-mini {
-  max-width: 20%;
-  cursor: pointer; }
 
 .menu-scroll {
   position: fixed;
@@ -316,12 +312,11 @@ nav ul {
   display: inline-block;
   vertical-align: center;
   position: absolute;
-  top: 3px;
+  top: 2px;
   right: 0px;
   height: 5px;
   width: 5px;
-  font-size: 10px;
-  font-weight: bold;
+  font-size: 11px;
   text-align: center;
   z-index: 1; }
 

@@ -12,10 +12,19 @@
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 1.5% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; }
+  width: 80%;
+  height: 90vh; }
+
+.modal-active {
+  -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+.resume-content {
+  height: 90%;
+  width: 100%; }
 
 .close {
   color: #aaa;

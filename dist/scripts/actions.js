@@ -178,11 +178,13 @@ window.onresize = e => {
 };
 
 contactBtn.onclick = e => {
+  const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
+
   e.preventDefault();
-  contactBtn.focus();
   contactSection = document.getElementById("contact");
+  let originalTop = distanceToTop(contactSection);
   window.scrollBy({
-    top: contactSection.offsetTop - 1,
+    top: originalTop + 1,
     left: 0,
     behavior: "smooth"
   });
@@ -193,7 +195,7 @@ contactBtn.onclick = e => {
     if (distanceToTop(contactSection) === 0 || atBottom) {
       contactSection.tabIndex = "-1";
       contactSection.focus();
-      window.history.pushState("", "", targetID);
+      window.history.pushState("", "", "#contact");
       clearInterval(checkIfDone);
     }
   }, 100);
@@ -202,12 +204,15 @@ contactBtn.onclick = e => {
 resumeBtn.onclick = e => {
   e.preventDefault();
   modal.style.display = "block";
+  modal.classList.add("modal-active");
 };
 span.onclick = e => {
   modal.style.display = "none";
+  modal.classList.remove("modal-active");
 };
 window.onclick = e => {
   if (e.target == modal) {
     modal.style.display = "none";
+    modal.classList.remove("modal-active");
   }
 };
