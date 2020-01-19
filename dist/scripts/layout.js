@@ -119,7 +119,7 @@ const loadProjects = projects => {
     </li>
     </span>
     <button class="btn-3">
-    <span>Hide</span>
+    <span>Hide Text</span> 
     </button> 
     </ul>
     </li>`;
@@ -128,7 +128,8 @@ const loadProjects = projects => {
   // projects section
   let projImgs = document.querySelectorAll(".proj-img");
   let projBtns = document.querySelectorAll(".btn-2");
-  let projTxtHide = document.querySelectorAll(".btn-3");
+  let projClose = document.querySelectorAll(".btn-3");
+  let projInfo = document.querySelectorAll(".proj-info");
   let projSpans = document.querySelectorAll(".btn-2 span");
 
   projImgs.forEach((pImg, i) => {
@@ -138,7 +139,18 @@ const loadProjects = projects => {
     projSpans[i].addEventListener("focus", e => {
       pImg.setAttribute("src", `/images/${currentProjects[i].pics[1]}`);
     });
-    projBtns[i].addEventListener("click", e => {});
+    projBtns[i].addEventListener("click", e => {
+      projInfo[i].style.display = "block";
+      projInfo[i].classList.add("open-txt");
+    });
+    projClose[i].addEventListener("click", e => {
+      projInfo[i].classList.remove("open-txt");
+      projInfo[i].classList.add("close-txt");
+      setTimeout(() => {
+        projInfo[i].style.display = "none";
+        projInfo[i].classList.remove("close-txt");
+      }, 350);
+    });
     projBtns[i].addEventListener("mouseover", e => {
       pImg.setAttribute("src", `/images/${currentProjects[i].pics[1]}`);
     });

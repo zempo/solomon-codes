@@ -440,10 +440,6 @@ nav ul {
 .btn-2:focus,
 .btn-2:active {
   background: rgba(0, 0, 0, 0.4);
-  -moz-transition: all 0.15s cubic-bezier(0.75, 0, 0.125, 1);
-  -o-transition: all 0.15s cubic-bezier(0.75, 0, 0.125, 1);
-  -webkit-transition: all 0.15s cubic-bezier(0.75, 0, 0.125, 1);
-  transition: all 0.15s cubic-bezier(0.75, 0, 0.125, 1);
 }
 
 .proj-img-wrapper-1 .btn-2 {
@@ -464,13 +460,27 @@ nav ul {
   border-top-right-radius: 5px;
 }
 
-.proj-info {
+#p-info-1,
+#p-info-2,
+#p-info-3 {
   display: none;
+}
+
+.open-txt {
+  -webkit-animation: scale-in-ver-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-in-ver-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.close-txt {
+  -webkit-animation: scale-out-ver-top 0.3s
+    cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-ver-top 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .proj ul {
   list-style-type: none;
-  padding-left: 0;
+  padding: 20px;
   text-align: justify;
 }
 // form submission
