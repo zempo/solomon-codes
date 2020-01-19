@@ -482,6 +482,26 @@ nav ul {
   list-style-type: none;
   padding: 20px;
   text-align: justify;
+  border: 5px solid $ubuntu-dark;
+  border-bottom: 24px solid $ubuntu-dark;
+  border-top: none;
+  position: relative;
+  margin: auto;
+  top: -7px;
+  width: 90%;
+}
+
+.btn-3 {
+  position: absolute;
+  border: none;
+  background: $ubuntu-dark;
+  color: $ubuntu-light;
+  width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 5px;
+  bottom: -20px;
+  left: 0px;
 }
 // form submission
 

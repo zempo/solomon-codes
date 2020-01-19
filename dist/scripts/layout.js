@@ -23,7 +23,7 @@ const currentProjects = [
     title: "Just the Occasion",
     pics: ["jto-1.png", "jto-2.png"],
     description:
-      "jtO transforms greeting cards into a personal and social experience. You can create, react to, and customize your own greeting cards within minutes.",
+      "Just the Occasion transforms greeting cards into a personal and social experience. You can create, react to, and customize your own greeting cards within minutes.",
     tech: [
       "React, ",
       "Hooks and Context API, ",
@@ -105,6 +105,7 @@ const loadProjects = projects => {
     </div>
     <ul id="p-info-${i + 1}" class="proj-info">
     <li>${proj.description}</li>
+    <br/>
     <li>Tech: ${proj.tech.join("")}</li>
     <li>Libraries: ${proj.libs.join("")}</li>
     <li>Source Code: 

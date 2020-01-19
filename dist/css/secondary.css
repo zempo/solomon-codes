@@ -394,7 +394,26 @@ nav ul {
 .proj ul {
   list-style-type: none;
   padding: 20px;
-  text-align: justify; }
+  text-align: justify;
+  border: 5px solid #3d3a3a;
+  border-bottom: 24px solid #3d3a3a;
+  border-top: none;
+  position: relative;
+  margin: auto;
+  top: -7px;
+  width: 90%; }
+
+.btn-3 {
+  position: absolute;
+  border: none;
+  background: #3d3a3a;
+  color: #f7f7f7;
+  width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 5px;
+  bottom: -20px;
+  left: 0px; }
 
 .form-status {
   width: 100%;
