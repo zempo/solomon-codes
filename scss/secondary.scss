@@ -285,94 +285,62 @@ nav ul {
 // width: 250px;
 // height: 407.13px;
 .prof-img ul li:hover:nth-child(1) {
-  box-shadow: 150px 275px 0px 90px #000000;
+  box-shadow: 150px 259px 0px 90px #000000;
 }
 
 .prof-img ul li:hover:nth-child(2) {
-  box-shadow: 150px 230px 0px 90px #e01506;
+  box-shadow: 150px 217px 0px 90px #e01506;
 }
 
 .prof-img ul li:hover:nth-child(3) {
-  box-shadow: 150px 191px 0px 90px #bb6d07;
+  box-shadow: 150px 173px 0px 90px #bb6d07;
 }
 
 .prof-img ul li:hover:nth-child(4) {
-  box-shadow: 150px 149px 0px 90px #ffff77;
+  box-shadow: 150px 133px 0px 90px #ffff77;
 }
 
 .prof-img ul li:hover:nth-child(5) {
-  box-shadow: 150px 107px 0px 90px #00471d;
+  box-shadow: 150px 91px 0px 90px #00471d;
 }
 
 .prof-img ul li:hover:nth-child(6) {
-  box-shadow: 150px 65px 0px 90px #1c6881;
+  box-shadow: 150px 49px 0px 90px #1c6881;
 }
 
 .prof-img ul li:hover:nth-child(7) {
-  box-shadow: 150px 23px 0px 90px #070c50;
+  box-shadow: 150px 7px 0px 90px #070c50;
 }
 
 .prof-img ul li:hover:nth-child(8) {
-  box-shadow: 150px -19px 0px 90px #6b0963;
+  box-shadow: 150px -35px 0px 90px #6b0963;
 }
 
 .prof-img ul li:hover:nth-child(9) {
-  box-shadow: 150px -61px 0px 90px #5300a6;
+  box-shadow: 150px -77px 0px 90px #5300a6;
 }
 
-// projects
-// projects.forEach(proj => {
-//   input += `<li class="proj">
-//   <p>${proj.title}</p>
-//   <div class="proj-img-wrapper">
-//   <img class="proj-img" src="/images/${proj.pics[0]}" alt="${
-//     proj.title
-//   } image"/>
-//   </div>
-//   <ul>
-//   <li>${proj.description}</li>
-//   <li>Tech: ${proj.tech.join("")}</li>
-//   <li>Libraries: ${proj.libs.join("")}</li>
-//   <li>Source Code:
-//   <a href="${proj.repo}" target="_blank" rel="noopener noreferrer">
-//   Here
-//   </a>
-//   </li>
-//   <li>Live App:
-//   <a href="${proj.live}" target="_blank" rel="noopener noreferrer">
-//   Here
-//   </a>
-//   </li>
-//   </ul>
-//   </li>`;
-// });
-
-// .projects-list {
-// }
 .proj {
   list-style-type: none;
   position: relative;
 }
+
 .proj h2 {
   text-align: center;
 }
 
 .proj-img-wrapper-1 {
-  cursor: pointer;
   position: relative;
   width: 100%;
 }
 
 .proj-img-wrapper-2 {
-  cursor: pointer;
   position: relative;
   width: 100%;
 }
 
-.pulse::after {
-  width: 100px;
-  height: 100px;
-  background: $ubuntu-dark;
+.prof-img {
+  display: inline-block;
 }
 
 .proj-img-wrapper-1::after {
@@ -403,6 +371,7 @@ nav ul {
   height: 6px;
   width: 6px;
   text-align: center;
+  z-index: 1;
   border: 1px solid $ubuntu-light;
   // border-radius: 50%;
 }
@@ -438,6 +407,51 @@ nav ul {
   z-index: 1;
 }
 
+.btn-2 {
+  background: rgba(0, 0, 0, 0);
+  width: calc(100% + 10px);
+  height: calc(100% - 6px);
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-2 span {
+  color: rgba(0, 0, 0, 0);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn-2:hover span,
+.btn-2:active span,
+.btn-2:focus span {
+  background: $ubuntu-dark;
+  padding: 10px;
+  border: 1px solid $ubuntu-dark;
+  font-weight: bold;
+  border-radius: 7px;
+  color: $ubuntu-light;
+  opacity: 0.95;
+}
+
+.btn-2:hover,
+.btn-2:focus,
+.btn-2:active {
+  background: rgba(0, 0, 0, 0.4);
+  -moz-transition: all 0.15s cubic-bezier(0.75, 0, 0.125, 1);
+  -o-transition: all 0.15s cubic-bezier(0.75, 0, 0.125, 1);
+  -webkit-transition: all 0.15s cubic-bezier(0.75, 0, 0.125, 1);
+  transition: all 0.15s cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.proj-img-wrapper-1 .btn-2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
 .project-r .proj-img {
   max-width: 100%;
   border: 5px solid $ubuntu-dark;
@@ -448,6 +462,16 @@ nav ul {
   -moz-border-radius-topright: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+
+.proj-info {
+  display: none;
+}
+
+.proj ul {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: justify;
 }
 // form submission
 

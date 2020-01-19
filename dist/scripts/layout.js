@@ -1,15 +1,5 @@
 const currentProjects = [
   {
-    title: "Aeropolis",
-    pics: ["air-1.png", "air-2.png"],
-    description:
-      "Aeropolis provides live air quality values for thousands of cities around the globe. Discover a city's air quality, read local health news, and browse the wikipedia.",
-    tech: ["HTML / CSS, ", "jQuery, ", "and github pages"],
-    libs: ["AirVisual", "Leaflet.js", "News API", "Wikipedia API"],
-    repo: "https://github.com/zempo/aeropolis",
-    live: "https://zempo.github.io/Aeropolis/"
-  },
-  {
     title: "Above the Line",
     pics: ["atl-1.png", "atl-2.png"],
     description:
@@ -52,6 +42,16 @@ const currentProjects = [
     ],
     repo: "https://github.com/zempo/jto-client",
     live: "https://just-the-occasion.netlify.com/"
+  },
+  {
+    title: "Aeropolis",
+    pics: ["air-1.png", "air-2.png"],
+    description:
+      "Aeropolis provides live air quality values for thousands of cities around the globe. Discover a city's air quality, read local health news, and browse the wikipedia.",
+    tech: ["HTML / CSS, ", "jQuery, ", "and github pages"],
+    libs: ["AirVisual", "Leaflet.js", "News API", "Wikipedia API"],
+    repo: "https://github.com/zempo/aeropolis",
+    live: "https://zempo.github.io/Aeropolis/"
   }
 ];
 
@@ -92,7 +92,7 @@ const currentSnippets = [
 const loadProjects = projects => {
   let container = document.querySelector(".projects-list");
   let input = "";
-  projects.forEach(proj => {
+  projects.forEach((proj, i) => {
     input += `<li class="proj">
     <h2>${proj.title}</h2>
     <div class="proj-img-wrapper-2">
@@ -100,9 +100,10 @@ const loadProjects = projects => {
     <img class="proj-img" src="/images/${proj.pics[0]}" alt="${
       proj.title
     } image"/>
+    <button class="btn-2"><span>Learn More</span></button>
     </div>
     </div>
-    <ul>
+    <ul id="p-info-${i + 1}" class="proj-info">
     <li>${proj.description}</li>
     <li>Tech: ${proj.tech.join("")}</li>
     <li>Libraries: ${proj.libs.join("")}</li>
@@ -116,26 +117,43 @@ const loadProjects = projects => {
     Here
     </a>
     </li>
+    </span>
+    <button class="btn-3">
+    <span>Hide</span>
+    </button> 
     </ul>
     </li>`;
   });
   container.innerHTML = input;
   // projects section
   let projImgs = document.querySelectorAll(".proj-img");
+  let projBtns = document.querySelectorAll(".btn-2");
+  let projTxtHide = document.querySelectorAll(".btn-3");
+  let projSpans = document.querySelectorAll(".btn-2 span");
+
   projImgs.forEach((pImg, i) => {
-    pImg.addEventListener("mouseover", e => {
+    projSpans[i].addEventListener("mouseover", e => {
       pImg.setAttribute("src", `/images/${currentProjects[i].pics[1]}`);
-      pImg.classList.add("pulse");
-      setTimeout(() => {
-        pImg.classList.remove("pulse");
-      }, 300);
     });
-    pImg.addEventListener("mouseout", e => {
+    projSpans[i].addEventListener("focus", e => {
+      pImg.setAttribute("src", `/images/${currentProjects[i].pics[1]}`);
+    });
+    projBtns[i].addEventListener("click", e => {});
+    projBtns[i].addEventListener("mouseover", e => {
+      pImg.setAttribute("src", `/images/${currentProjects[i].pics[1]}`);
+    });
+    projBtns[i].addEventListener("focus", e => {
+      pImg.setAttribute("src", `/images/${currentProjects[i].pics[1]}`);
+      // pImg.classList.add("pulse");
+      // setTimeout(() => {
+      //   pImg.classList.remove("pulse");
+      // }, 300);
+    });
+    projBtns[i].addEventListener("mouseout", e => {
       pImg.setAttribute("src", `/images/${currentProjects[i].pics[0]}`);
-      pImg.classList.add("pulse");
-      setTimeout(() => {
-        pImg.classList.remove("pulse");
-      }, 300);
+    });
+    projBtns[i].addEventListener("blur", e => {
+      pImg.setAttribute("src", `/images/${currentProjects[i].pics[0]}`);
     });
   });
 };
