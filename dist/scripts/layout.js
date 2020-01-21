@@ -3,7 +3,7 @@ const currentProjects = [
     title: "Above the Line",
     pics: ["atl-1.png", "atl-2.png"],
     description:
-      "Above the Line helps users create and download their own scripts/screenplays -- while taking care of the formatting. You can even customize your account's appearance whenever you want!",
+      " helps users create and download their own scripts/screenplays -- while taking care of the formatting. You can even customize your account's appearance whenever you want!",
     tech: [
       "React, ",
       "Hooks and Context API, ",
@@ -23,7 +23,7 @@ const currentProjects = [
     title: "Just the Occasion",
     pics: ["jto-1.png", "jto-2.png"],
     description:
-      "Just the Occasion transforms greeting cards into a personal and social experience. You can create, react to, and customize your own greeting cards within minutes.",
+      " transforms greeting cards into a personal and social experience. You can create, react to, and customize your own greeting cards within minutes.",
     tech: [
       "React, ",
       "Hooks and Context API, ",
@@ -47,7 +47,7 @@ const currentProjects = [
     title: "Aeropolis",
     pics: ["air-1.png", "air-2.png"],
     description:
-      "Aeropolis provides live air quality values for thousands of cities around the globe. Discover a city's air quality, read local health news, and browse the wikipedia.",
+      " provides live air quality values for thousands of cities around the globe. Discover a city's air quality, read local health news, and browse the wikipedia.",
     tech: ["HTML / CSS, ", "jQuery, ", "and github pages"],
     libs: ["AirVisual", "Leaflet.js", "News API", "Wikipedia API"],
     repo: "https://github.com/zempo/aeropolis",
@@ -59,8 +59,6 @@ const currentSnippets = [
   {
     type: "article",
     title: "The Expedited Eureka",
-    // how one can expedite their creative process by detoxing from tech and exploring other disciplines.
-    // in short, an excuse to have fun and fight against burnout
     link: ""
   },
   {
@@ -104,20 +102,24 @@ const loadProjects = projects => {
     </div>
     </div>
     <ul id="p-info-${i + 1}" class="proj-info">
-    <li>${proj.description}</li>
+    <li><b>${proj.title}</b>${proj.description}</li>
     <br/>
-    <li>Tech: ${proj.tech.join("")}</li>
-    <li>Libraries: ${proj.libs.join("")}</li>
-    <li>Source Code: 
+    <li><b>Tech:</b> ${proj.tech.join("")}.</li>
+    <br/>
+    <li><b>Libraries:</b> ${proj.libs.join("")}.</li>
+    <br/>
+    <li><b>Source Code: </b> 
     <a href="${proj.repo}" target="_blank" rel="noopener noreferrer">
     Here
     </a>
     </li>
-    <li>Live App: 
+    <br/>
+    <li><b>Live App: </b> 
     <a href="${proj.live}" target="_blank" rel="noopener noreferrer">
     Here
     </a>
     </li>
+    <br/>
     </span>
     <button class="btn-3">
     <span>Hide Text</span> 
