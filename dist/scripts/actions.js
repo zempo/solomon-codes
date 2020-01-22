@@ -47,7 +47,7 @@ function scrollToAnchor(e, respond = null) {
     const atBottom =
       window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
 
-    if (distanceToTop(targetAnchor) === 0 || atBottom) {
+    if (distanceToTop(targetAnchor) === 0) {
       targetAnchor.tabIndex = "-1";
       targetAnchor.focus();
       window.history.pushState("", "", targetID);

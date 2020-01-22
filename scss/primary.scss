@@ -188,7 +188,7 @@ main {
 
 .contact {
   grid-area: c;
-  height: 105vh;
+  height: 100vh;
   border-left: 1px solid $main-txt;
   border-right: 1px solid $main-txt;
 }
@@ -254,6 +254,13 @@ main {
   .about-l {
     height: auto;
     border-bottom: none;
+  }
+
+  .project-r,
+  .snippets-r,
+  .about-r {
+    border-top: none;
+    height: auto;
   }
 
   .project-l,

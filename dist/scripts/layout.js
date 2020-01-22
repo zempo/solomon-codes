@@ -3,7 +3,7 @@ const currentProjects = [
     title: "Above the Line",
     pics: ["atl-1.png", "atl-2.png"],
     description:
-      " helps users create and download their own scripts/screenplays -- while taking care of the formatting. You can even customize your account's appearance whenever you want!",
+      " helps users create and download their own scripts/screenplays -- and handles the formatting. You can even customize your homepage and organize your scripts.",
     tech: [
       "React, ",
       "Hooks and Context API, ",
@@ -23,7 +23,7 @@ const currentProjects = [
     title: "Just the Occasion",
     pics: ["jto-1.png", "jto-2.png"],
     description:
-      " transforms greeting cards into a personal and social experience. You can create, react to, and customize your own greeting cards within minutes.",
+      " transforms greeting cards into a personal and social experience. You can create, react to, and customize greeting cards within minutes.",
     tech: [
       "React, ",
       "Hooks and Context API, ",
