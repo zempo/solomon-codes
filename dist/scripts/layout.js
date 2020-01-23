@@ -69,12 +69,12 @@ const currentSnippets = [
   {
     type: "algo",
     title: "Memoize Fibbonachi",
-    link: ""
+    link: "https://repl.it/@zempo1/memo"
   },
   {
     type: "animation",
     title: "Cloud Animation",
-    link: ""
+    link: "https://codepen.io/zemposPen/pen/bGNQmgX"
   },
   {
     type: "algo",
@@ -82,10 +82,26 @@ const currentSnippets = [
     link: ""
   },
   {
+    type: "algo",
+    title: "",
+    link: ""
+  },
+  {
     type: "animation",
     title: ""
   }
 ];
+
+const loadSnippets = snippets => {
+  let container = document.querySelector(".snippets-list");
+  let input = "";
+  snippets.forEach((snip, i) => {
+    input += `<li class="snip">
+    <h2>${snip.title}</h2>
+    </li>`;
+  });
+  container.innerHTML = input;
+};
 
 const loadProjects = projects => {
   let container = document.querySelector(".projects-list");
@@ -159,10 +175,6 @@ const loadProjects = projects => {
     });
     projBtns[i].addEventListener("focus", e => {
       pImg.setAttribute("src", `/images/${currentProjects[i].pics[1]}`);
-      // pImg.classList.add("pulse");
-      // setTimeout(() => {
-      //   pImg.classList.remove("pulse");
-      // }, 300);
     });
     projBtns[i].addEventListener("mouseout", e => {
       pImg.setAttribute("src", `/images/${currentProjects[i].pics[0]}`);
@@ -232,4 +244,5 @@ const runCarousel = () => {
 };
 
 runCarousel();
+loadSnippets(currentSnippets);
 loadProjects(currentProjects);

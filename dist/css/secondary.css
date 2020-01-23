@@ -109,7 +109,7 @@ nav ul {
 .menu-scroll {
   position: fixed;
   top: 20%;
-  right: 35px;
+  right: 25px;
   width: auto;
   -o-animation: fade-in-fwd 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   -moz-animation: fade-in-fwd 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
