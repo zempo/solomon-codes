@@ -59,8 +59,9 @@ h3 {
   font-size: 20px;
 }
 
-h3 {
-  font-weight: bold;
+.snip-h {
+  font-weight: normal;
+  font-size: 30px;
 }
 
 header {
@@ -218,7 +219,7 @@ main {
 .about-r {
   border-top: none;
   height: auto;
-  padding: 0 20vw;
+  padding: 0 18vw;
   text-align: justify;
 }
 

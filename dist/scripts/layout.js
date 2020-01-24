@@ -78,7 +78,7 @@ const currentSnippets = [
     link: "https://repl.it/@zempo1/Max-Arr-Sum"
   },
   {
-    type: "animation",
+    type: "algo",
     title: "Maze Matrices",
     link: "https://repl.it/@zempo1/Mad-Mazes"
   },
@@ -99,10 +99,25 @@ const loadSnippets = snippets => {
   let input = "";
   snippets.forEach((snip, i) => {
     input += `<li class="snip">
-    <h2>${snip.title}</h2>
+    <h3 class="snip-h">${snip.title}</h3>
+    <div class="snip-wrapper-2">
+    <div class="snip-wrapper-1">
+    <img class="snip-img" src="/images/${snip.type}.svg" alt="${snip.type}" info="${snip.link}" />
+    <button class="btn-4"><span>View Snippet</span></button>
+    </div>
+    </div>
     </li>`;
   });
   container.innerHTML = input;
+  let snipImgs = document.querySelectorAll(".snip-img");
+  let snipBtns = document.querySelectorAll(".btn-4");
+
+  snipImgs.forEach((sImg, i) => {
+    snipBtns[i].addEventListener("click", e => {
+      let destination = sImg.getAttribute("info");
+      window.open(destination, "_blank");
+    });
+  });
 };
 
 const loadProjects = projects => {

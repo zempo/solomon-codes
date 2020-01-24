@@ -181,25 +181,25 @@ nav ul {
 //   font-weight: bold;
 // }
 
-.keyword-pink {
-  color: rgb(224, 38, 100);
-  font-weight: bold;
-}
+// .keyword-pink {
+//   color: rgb(224, 38, 100);
+//   font-weight: bold;
+// }
 
-.keyword-purple,
-.keyword-purple a {
-  color: #663274;
-  font-weight: bold;
-}
+// .keyword-purple,
+// .keyword-purple a {
+//   color: #663274;
+//   font-weight: bold;
+// }
 
 // .keyword-red {
 //   color: #9e1b1b;
 // }
 
-.keyword-blue {
-  color: #192274;
-  font-weight: bold;
-}
+// .keyword-blue {
+//   color: #192274;
+//   font-weight: bold;
+// }
 
 // .keyword-green {
 //   color: #196b39;
@@ -327,12 +327,38 @@ nav ul {
   position: relative;
 }
 
-.proj h2,
-.snip h2 {
+.proj h2 {
   text-align: center;
 }
 
-// snippets
+// snippets + projects
+.snip,
+.snip-wrapper-2,
+.snip-wrapper-1 {
+  text-align: center;
+}
+
+.snippets-list {
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.snip-wrapper-2 {
+  position: relative;
+  width: 75%;
+  margin-left: 12.5%;
+}
+
+.snip-wrapper-1 {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.snip-img {
+  width: 100%;
+}
 
 .proj-img-wrapper-1 {
   position: relative;
@@ -341,14 +367,16 @@ nav ul {
 
 .proj-img-wrapper-2 {
   position: relative;
-  width: 100%;
+  width: 90%;
+  margin-left: 5%;
 }
 
 .prof-img {
   display: inline-block;
 }
 
-.proj-img-wrapper-1::after {
+.proj-img-wrapper-1::after,
+.snip-wrapper-1::after {
   content: "";
   background: $ubuntu-x;
   color: $ubuntu-light;
@@ -364,7 +392,8 @@ nav ul {
   border-radius: 50%;
 }
 
-.proj-img-wrapper-1::before {
+.proj-img-wrapper-1::before,
+.snip-wrapper-1::before {
   content: "";
   background: $ubuntu-dark;
   color: $ubuntu-light;
@@ -381,7 +410,8 @@ nav ul {
   // border-radius: 50%;
 }
 
-.proj-img-wrapper-2::before {
+.proj-img-wrapper-2::before,
+.snip-wrapper-2::before {
   content: "x";
   color: $ubuntu-light;
   display: inline-block;
@@ -397,7 +427,8 @@ nav ul {
   z-index: 1;
 }
 
-.proj-img-wrapper-2::after {
+.proj-img-wrapper-2::after,
+.snip-wrapper-2::after {
   content: "";
   color: $ubuntu-light;
   display: inline-block;
@@ -412,7 +443,8 @@ nav ul {
   z-index: 1;
 }
 
-.btn-2 {
+.btn-2,
+.btn-4 {
   background: rgba(0, 0, 0, 0);
   width: calc(100% + 10px);
   height: calc(100% - 6px);
@@ -423,38 +455,51 @@ nav ul {
   cursor: pointer;
 }
 
-.btn-2 span {
+.btn-2 span,
+.btn-4 span {
   color: rgba(0, 0, 0, 0);
   font-size: 22px;
   cursor: pointer;
 }
 
+.btn-4 span {
+  font-size: 20px;
+}
+
 .btn-2:hover span,
 .btn-2:active span,
-.btn-2:focus span {
+.btn-2:focus span,
+.btn-4:hover span,
+.btn-4:active span,
+.btn-4:focus span {
   background: $ubuntu-dark;
   padding: 10px;
   border: 1px solid $ubuntu-dark;
   font-weight: bold;
   border-radius: 7px;
   color: $ubuntu-light;
-  opacity: 0.95;
 }
 
 .btn-2:hover,
 .btn-2:focus,
-.btn-2:active {
-  background: rgba(0, 0, 0, 0.4);
+.btn-2:active,
+.btn-4:hover,
+.btn-4:focus,
+.btn-4:active {
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.proj-img-wrapper-1 .btn-2 {
+.proj-img-wrapper-1 .btn-2,
+.snip-wrapper-1 .btn-4 {
   position: absolute;
   top: 0px;
   left: 0px;
 }
-
-.project-r .proj-img {
+.proj-img {
   max-width: 100%;
+}
+.project-r .proj-img,
+.snip-img {
   border: 5px solid $ubuntu-dark;
   border-top: 24px solid $ubuntu-dark;
   -webkit-border-top-left-radius: 5px;
@@ -493,7 +538,8 @@ nav ul {
   position: relative;
   margin: auto;
   top: -7px;
-  width: 90%;
+  left: 5px;
+  width: calc(90% - 40px);
 }
 
 .btn-3 {
@@ -521,4 +567,17 @@ nav ul {
 .form-status:empty {
   // background: rgb(255, 255, 255);
   height: 0px;
+}
+
+@media screen and (max-width: 1600px) {
+  .proj-img-wrapper-2 {
+    width: 100%;
+  }
+  .proj ul {
+    list-style-type: none;
+    padding: 15px;
+    top: -7px;
+    left: 5.5%;
+    width: 90%;
+  }
 }
