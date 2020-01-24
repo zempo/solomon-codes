@@ -2,7 +2,7 @@
 let contactBtn = document.querySelector(".contact-btn");
 let resumeBtn = document.querySelector(".resume-btn");
 // navigation
-let navMenu = document.querySelector(".menu");
+let navMenu = document.querySelector(".menu-center");
 let navItems = document.querySelectorAll(".nav-link");
 let navLinks = document.querySelectorAll(".nav-link a");
 let aboutSection = document.getElementById("about");
@@ -22,7 +22,9 @@ let message = document.getElementById("msg");
 function scrollTo() {
   const links = document.querySelectorAll("nav a");
   links.forEach(link => {
-    link.onclick = scrollToAnchor;
+    if (!link.href.includes("https")) {
+      link.onclick = scrollToAnchor;
+    }
   });
 }
 
