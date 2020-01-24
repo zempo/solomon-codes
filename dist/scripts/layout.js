@@ -57,38 +57,40 @@ const currentProjects = [
 
 const currentSnippets = [
   {
-    type: "article",
-    title: "The Expedited Eureka",
-    link: ""
-  },
-  {
     type: "animation",
-    title: "Card Animation",
-    link: ""
-  },
-  {
-    type: "algo",
-    title: "Memoize Fibbonachi",
-    link: "https://repl.it/@zempo1/memo"
-  },
-  {
-    type: "animation",
-    title: "Cloud Animation",
+    title: "Cloud Landing (Css)",
     link: "https://codepen.io/zemposPen/pen/bGNQmgX"
   },
   {
-    type: "algo",
-    title: "Merge and Sort",
-    link: ""
-  },
-  {
-    type: "algo",
-    title: "",
-    link: ""
+    type: "article",
+    title: "Expedite your Eurekas",
+    link:
+      "https://medium.com/@solomonzelenko/expedite-your-eurekas-704d35c7892a"
   },
   {
     type: "animation",
-    title: ""
+    title: "Greeting Card (Css)",
+    link: "https://codepen.io/zemposPen/pen/PowLbBd"
+  },
+  {
+    type: "algo",
+    title: "Max Arr Sum",
+    link: "https://repl.it/@zempo1/Max-Arr-Sum"
+  },
+  {
+    type: "animation",
+    title: "Maze Matrices",
+    link: "https://repl.it/@zempo1/Mad-Mazes"
+  },
+  {
+    type: "algo",
+    title: "Memoize Fibonacci",
+    link: "https://repl.it/@zempo1/memo"
+  },
+  {
+    type: "algo",
+    title: "Sort by Date",
+    link: "https://repl.it/@zempo1/sort-by-date"
   }
 ];
 

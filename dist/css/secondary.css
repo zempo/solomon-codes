@@ -256,11 +256,13 @@ nav ul {
 .prof-img ul li:hover:nth-child(9) {
   box-shadow: 150px -77px 0px 90px #5300a6; }
 
-.proj {
+.proj,
+.snip {
   list-style-type: none;
   position: relative; }
 
-.proj h2 {
+.proj h2,
+.snip h2 {
   text-align: center; }
 
 .proj-img-wrapper-1 {
@@ -311,7 +313,7 @@ nav ul {
   vertical-align: center;
   position: absolute;
   top: 2px;
-  right: 0px;
+  right: -0.25px;
   height: 5px;
   width: 5px;
   font-size: 11px;
@@ -344,7 +346,7 @@ nav ul {
 
 .btn-2 span {
   color: rgba(0, 0, 0, 0);
-  font-size: 18px;
+  font-size: 22px;
   cursor: pointer; }
 
 .btn-2:hover span,
@@ -411,7 +413,7 @@ nav ul {
   color: #f7f7f7;
   width: 100%;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   padding-top: 5px;
   bottom: -20px;
   left: 0px; }
