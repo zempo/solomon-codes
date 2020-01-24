@@ -76,6 +76,10 @@ textarea {
   margin: 2rem;
 }
 
+textarea {
+  min-height: 70px;
+}
+
 header {
   width: calc(100% - 2px);
   height: 5rem;
