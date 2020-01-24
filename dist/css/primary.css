@@ -37,11 +37,22 @@ h2 {
 p,
 li,
 h3 {
-  font-size: 20px; }
+  font-size: 22px; }
 
-.snip-h {
+.snip-h,
+label,
+.about-r h2 {
   font-weight: normal;
   font-size: 30px; }
+
+input,
+textarea {
+  width: 75%;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 22px;
+  margin: 2rem; }
 
 header {
   width: calc(100% - 2px);
@@ -139,7 +150,8 @@ main {
 
 .contact {
   grid-area: c;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 0 18vw;
   border-left: 1px solid black;
   border-right: 1px solid black; }
 

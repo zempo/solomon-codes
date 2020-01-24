@@ -5,15 +5,13 @@ const currentProjects = [
     description:
       " helps users create and download their own scripts/screenplays -- and handles the formatting. You can even customize your homepage and organize your scripts.",
     tech: [
-      "React, ",
-      "Hooks and Context API, ",
-      "jwt authentication, ",
-      "Node, ",
-      "Express, ",
-      "PostgreSQL, ",
-      "Knex, ",
+      "React.js (Hooks & Context), ",
+      "JWT auth, ",
+      "Node.js (Express), ",
+      "PostgreSQL (Knex), ",
       "Jest, ",
-      "and Mocha"
+      "Mocha, and",
+      " Zeit"
     ],
     libs: ["ReactPDF ", "and React Resizeable"],
     repo: "https://github.com/zempo/jto-client",
@@ -25,15 +23,13 @@ const currentProjects = [
     description:
       " transforms greeting cards into a personal and social experience. You can create, react to, and customize greeting cards within minutes.",
     tech: [
-      "React, ",
-      "Hooks and Context API, ",
-      "jwt authentication, ",
-      "Node, ",
-      "Express, ",
-      "PostgreSQL, ",
-      "Knex, ",
+      "React.js (Hooks & Context), ",
+      "JWT auth, ",
+      "Node.js (Express), ",
+      "PostgreSQL (Knex), ",
       "Jest, ",
-      "and Mocha"
+      "Mocha, and",
+      " Netlify"
     ],
     libs: [
       "Cloudinary, ",
@@ -49,7 +45,7 @@ const currentProjects = [
     description:
       " provides live air quality values for thousands of cities around the globe. Discover a city's air quality, read local health news, and browse the wikipedia.",
     tech: ["HTML / CSS, ", "jQuery, ", "and github pages"],
-    libs: ["AirVisual", "Leaflet.js", "News API", "Wikipedia API"],
+    libs: ["AirVisual, ", "Leaflet.js, ", "News API, and ", "Wikipedia API"],
     repo: "https://github.com/zempo/aeropolis",
     live: "https://zempo.github.io/Aeropolis/"
   }

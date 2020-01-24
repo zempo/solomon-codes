@@ -9,9 +9,9 @@
 </cc:Work>
 </rdf:RDF>
 </metadata>
-<g transform="translate(0,203)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="30">
-<path d="m400.93 196.9 158.44-155.59-157.96-157.01" stroke-linejoin="round"/>
-<path d="m194.24 196.9-158.44-155.59 157.96-157.01" stroke-linejoin="round"/>
-<path d="m235.85 239.55 126.24-403.68"/>
+<g transform="translate(0,203)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="22.126">
+<path d="m374.25 165.09 116.85-114.75-116.5-115.8" stroke-linejoin="round"/>
+<path d="m221.82 165.09-116.85-114.75 116.5-115.8" stroke-linejoin="round"/>
+<path d="m252.51 196.54 93.107-297.72"/>
 </g>
 </svg>
