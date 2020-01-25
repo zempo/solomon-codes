@@ -111,7 +111,7 @@ nav {
 .menu-right {
   min-width: 10%;
   margin-top: 1.3rem;
-  margin-right: 5%;
+  // margin-right: 4%;
 }
 
 .menu-right img {
@@ -127,6 +127,11 @@ nav ul {
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
+}
+
+.menu-burger img {
+  display: none;
+  width: 50px;
 }
 
 // heading
@@ -193,35 +198,6 @@ nav ul {
   width: 20px;
 }
 
-// about
-// .keyword {
-//   font-weight: bold;
-// }
-
-// .keyword-pink {
-//   color: rgb(224, 38, 100);
-//   font-weight: bold;
-// }
-
-// .keyword-purple,
-// .keyword-purple a {
-//   color: #663274;
-//   font-weight: bold;
-// }
-
-// .keyword-red {
-//   color: #9e1b1b;
-// }
-
-// .keyword-blue {
-//   color: #192274;
-//   font-weight: bold;
-// }
-
-// .keyword-green {
-//   color: #196b39;
-// }
-
 .skills {
   width: 100%;
   display: flex;
@@ -244,6 +220,7 @@ nav ul {
   background-size: contain;
   border: 0px solid rgba(0, 0, 0, 0);
   border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 .prof-img ul {
@@ -596,5 +573,22 @@ nav ul {
     top: -7px;
     left: 5.5%;
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .menu-center,
+  .menu-right {
+    display: none;
+  }
+  .menu-burger {
+    margin-right: 5%;
+  }
+  .menu-burger img {
+    margin-top: 1.5rem;
+    display: inline-block;
+  }
+  .menu-scroll {
+    display: inline;
   }
 }

@@ -261,6 +261,19 @@ main {
     font-size: calc(6rem + 1vw);
     margin: 1rem;
   }
+  .logo-main {
+    min-height: calc(6rem + 9vw);
+    padding-top: 8rem;
+    max-width: 100%;
+    -o-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    -moz-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+  .lil-h {
+    font-weight: normal;
+    font-size: calc(3rem + 1.5vw);
+  }
   .project-r,
   .snippets-r,
   .about-r {

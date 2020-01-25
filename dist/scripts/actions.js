@@ -134,26 +134,26 @@ function handleContactForm(e) {
   } else if (!validEmail && !validSubject && validMessage) {
     e.preventDefault();
     status.innerHTML = `<p>Please enter your email in this format: <br/> yourname@example.com</p>
-          <p>Subject should be at least 3 characters.</p>`;
+          <p>Subject should be 3+ characters.</p>`;
   } else if (!validEmail && validSubject && !validMessage) {
     e.preventDefault();
     status.innerHTML = `<p>Please enter your email in this format: <br/> yourname@example.com</p>
-          <p>Message should be at least 5 characters.</p>`;
+          <p>Message should be 5+ characters.</p>`;
   } else if (!validEmail && !validSubject && !validMessage) {
     e.preventDefault();
     status.innerHTML = `<p>Please enter your email in this format: <br/> yourname@example.com</p>
-          <p>Subject should be at least 3 characters.</p>
-          <p>Message should be at least 5 characters.</p>`;
+          <p>Subject should be 3+ characters.</p>
+          <p>Message should be 5+ characters.</p>`;
   } else if (validEmail && !validSubject && !validMessage) {
     e.preventDefault();
-    status.innerHTML = `<p>Subject should be at least 3 characters.</p>
-          <p>Message should be at least 5 characters.</p>`;
+    status.innerHTML = `<p>Subject should be 3+ characters.</p>
+          <p>Message should be 5+ characters.</p>`;
   } else if (validEmail && validSubject && !validMessage) {
     e.preventDefault();
-    status.innerHTML = `<p>Message should be at least 5 characters.</p>`;
+    status.innerHTML = `<p>Message should be 5+ characters.</p>`;
   } else if (validEmail && !validSubject && validMessage) {
     e.preventDefault();
-    status.innerHTML = `<p>Subject should be at least 3 characters.</p>`;
+    status.innerHTML = `<p>Subject should be 3+ characters.</p>`;
   } else {
     status.innerHTML = `<p>Your Message Was Sent Successfully! <br/> We'll be in contact, shortly!</p>`;
   }
