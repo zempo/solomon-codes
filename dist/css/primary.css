@@ -187,7 +187,7 @@ main {
 .about-r h2:first-child,
 .snippets-r h2:first-child,
 .project-r h2:first-child {
-  margin-top: 80px; }
+  margin: 1rem; }
 
 .projects-list {
   padding-left: 0; }
@@ -196,7 +196,7 @@ main {
   .big-h {
     font-weight: bold;
     font-size: calc(6rem + 1vw);
-    margin: 1rem; }
+    margin: 5rem 1rem 2rem; }
   .logo-main {
     min-height: calc(6rem + 9vw);
     padding-top: 8rem;
@@ -210,22 +210,31 @@ main {
     font-size: calc(3rem + 1.5vw); }
   .project-r,
   .snippets-r,
-  .about-r {
-    padding: 0 15vw; } }
+  .about-r,
+  .contact {
+    padding: 0 12vw; }
+  h2 {
+    font-weight: normal;
+    font-size: 35px; }
+  p,
+  li,
+  h3 {
+    font-size: 23px; } }
 
 @media screen and (max-width: 900px) {
   .big-h {
     font-weight: bold;
-    font-size: calc(3rem + 1vw); }
+    font-size: calc(5rem + 1vw); }
   .project-r,
   .snippets-r,
-  .about-r {
+  .about-r,
+  .contact {
     padding: 0 10vw; } }
 
 @media screen and (max-width: 600px) {
   .big-h {
     font-weight: bold;
-    font-size: calc(2rem + 1vw); }
+    font-size: calc(4rem + 1vw); }
   .project-r,
   .snippets-r,
   .about-r {

@@ -27,7 +27,7 @@ nav {
   position: absolute;
   display: inline-block;
   width: 0%;
-  height: 2px;
+  height: 2.5px;
   background: black;
   bottom: -5px;
   left: 50%;
@@ -42,7 +42,7 @@ nav {
   position: absolute;
   display: inline-block;
   width: 105%;
-  height: 2px;
+  height: 2.5px;
   background: black;
   bottom: -5px;
   left: -2.5%;
@@ -109,6 +109,9 @@ nav ul {
   display: flex;
   justify-content: space-evenly; }
 
+.menu-burger {
+  cursor: pointer; }
+
 .menu-burger img {
   display: none;
   width: 50px; }
@@ -154,7 +157,7 @@ nav ul {
 .menu-scroll .nav-link {
   border: 1px solid #131313;
   border-radius: 50%;
-  background: white;
+  background: #fafafa;
   z-index: 2;
   height: 15px;
   width: 15px;
@@ -264,7 +267,8 @@ nav ul {
 .proj,
 .snip {
   list-style-type: none;
-  position: relative; }
+  position: relative;
+  margin-bottom: 5rem; }
 
 .proj h2 {
   text-align: center; }
@@ -475,8 +479,17 @@ nav ul {
   height: 0px; }
 
 @media screen and (max-width: 1600px) {
+  .snip-wrapper-2 {
+    position: relative;
+    width: 75%;
+    margin-left: 12.5%; }
+  .snippets-list {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 100%; }
   .proj-img-wrapper-2 {
-    width: 100%; }
+    width: 100%;
+    margin-left: 0; }
   .proj ul {
     list-style-type: none;
     padding: 15px;
@@ -494,4 +507,52 @@ nav ul {
     margin-top: 1.5rem;
     display: inline-block; }
   .menu-scroll {
-    display: inline; } }
+    display: inline; }
+  header {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    background: #fafafa;
+    z-index: 2; } }
+
+@media screen and (max-width: 1000px) {
+  .menu-scroll {
+    position: fixed;
+    top: 20%;
+    right: 10px;
+    width: auto;
+    margin-right: 10px;
+    -o-animation: fade-in-fwd 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    -moz-animation: fade-in-fwd 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    -webkit-animation: fade-in-fwd 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in-fwd 1s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+  .menu-scroll ul {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    width: auto;
+    position: relative; }
+  .menu-scroll ul::before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    display: inline-block;
+    width: 1px;
+    height: 75%;
+    background: black;
+    top: 0;
+    left: calc(50% - 1px); }
+  .menu-scroll .nav-link {
+    border: 1px solid #131313;
+    border-radius: 50%;
+    background: #fafafa;
+    z-index: 2;
+    height: 20px;
+    width: 20px;
+    margin-bottom: 15vh; }
+  .menu-scroll .nav-link:hover a {
+    color: rgba(0, 0, 0, 0); }
+  .menu-scroll .nav-link a {
+    color: rgba(255, 255, 255, 0);
+    height: 20px;
+    width: 20px; } }

@@ -3,6 +3,7 @@ let contactBtn = document.querySelector(".contact-btn");
 let resumeBtn = document.querySelector(".resume-btn");
 // navigation
 let navMenu = document.querySelector(".menu-center");
+let modalMenu = document.querySelector(".menu-modal");
 let navItems = document.querySelectorAll(".nav-link");
 let navLinks = document.querySelectorAll(".nav-link a");
 let aboutSection = document.getElementById("about");
