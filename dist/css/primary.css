@@ -154,7 +154,7 @@ main {
 .contact {
   grid-area: c;
   min-height: 100vh;
-  padding: 0 18vw;
+  padding: 0 16vw;
   border-left: 1px solid black;
   border-right: 1px solid black; }
 
@@ -177,7 +177,7 @@ main {
 .about-r {
   border-top: none;
   height: auto;
-  padding: 0 18vw;
+  padding: 0 16vw;
   text-align: justify; }
 
 .project-l,
@@ -212,7 +212,7 @@ main {
   .snippets-r,
   .about-r,
   .contact {
-    padding: 0 12vw; }
+    padding: 0 8vw; }
   h2 {
     font-weight: normal;
     font-size: 35px; }
@@ -229,7 +229,7 @@ main {
   .snippets-r,
   .about-r,
   .contact {
-    padding: 0 10vw; } }
+    padding: 0 6vw; } }
 
 @media screen and (max-width: 600px) {
   .big-h {

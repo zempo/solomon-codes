@@ -343,8 +343,8 @@ nav ul {
 
 .snip-wrapper-2 {
   position: relative;
-  width: 75%;
-  margin-left: 12.5%;
+  width: 70%;
+  margin-left: 15%;
 }
 
 .snip-wrapper-1 {
@@ -569,9 +569,9 @@ nav ul {
 @media screen and (max-width: 1600px) {
   .snip-wrapper-2 {
     position: relative;
-    width: 75%;
+    width: 50%;
     // padding: 10px;
-    margin-left: 12.5%;
+    margin-left: 25%;
   }
   .snippets-list {
     padding-left: 0;
@@ -585,9 +585,9 @@ nav ul {
   .proj ul {
     list-style-type: none;
     padding: 15px;
-    top: -7px;
-    left: 5.5%;
-    width: 90%;
+    top: -8px;
+    left: 0%;
+    width: calc(100% - 30px);
   }
 }
 
@@ -611,7 +611,14 @@ nav ul {
     top: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     background: rgb(250, 250, 250);
-    z-index: 2;
+    z-index: 1;
+  }
+  .proj ul {
+    list-style-type: none;
+    padding: 15px;
+    top: -8px;
+    left: 0%;
+    width: calc(100% - 30px);
   }
 }
 

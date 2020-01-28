@@ -209,7 +209,7 @@ main {
 .contact {
   grid-area: c;
   min-height: 100vh;
-  padding: 0 18vw;
+  padding: 0 16vw;
   border-left: 1px solid $main-txt;
   border-right: 1px solid $main-txt;
 }
@@ -236,7 +236,7 @@ main {
 .about-r {
   border-top: none;
   height: auto;
-  padding: 0 18vw;
+  padding: 0 16vw;
   text-align: justify;
 }
 
@@ -279,7 +279,7 @@ main {
   .snippets-r,
   .about-r,
   .contact {
-    padding: 0 12vw;
+    padding: 0 8vw;
   }
 
   h2 {
@@ -292,13 +292,6 @@ main {
   h3 {
     font-size: 23px;
   }
-
-  // .snip-h,
-  // label,
-  // .about-r h2 {
-  //   font-weight: normal;
-  //   font-size: 30px;
-  // }
 }
 
 @media screen and (max-width: 900px) {
@@ -310,7 +303,7 @@ main {
   .snippets-r,
   .about-r,
   .contact {
-    padding: 0 10vw;
+    padding: 0 6vw;
   }
 }
 

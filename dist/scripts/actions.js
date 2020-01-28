@@ -108,6 +108,11 @@ const resizeNav = () => {
     navMenu.classList.add("menu-scroll");
     navLinks.forEach((node, i) => {
       node.innerHTML = "....";
+      let start = node.href.indexOf("#") + 1;
+      anchorVal =
+        node.href.slice(start, start + 1).toUpperCase() +
+        node.href.slice(start + 1);
+      node.setAttribute("title", anchorVal);
     });
   } else {
     navMenu.classList.remove("menu-scroll");
@@ -116,6 +121,7 @@ const resizeNav = () => {
       let start = node.href.indexOf("#") + 1;
       anchorVal = node.href.slice(start);
       node.innerHTML = anchorVal;
+      node.setAttribute("title", "");
     });
   }
 };
