@@ -1,9 +1,9 @@
 $ubuntu-dark: #3d3a3a;
-$ubuntu-light: #f7f7f7;
+$ubuntu-light: rgb(247, 247, 247);
 $ubuntu-x: #eb6637;
 
 // nav
-nav {
+.main-nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -123,7 +123,7 @@ nav {
   text-decoration: none;
 }
 
-nav ul {
+.main-nav ul {
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
@@ -392,7 +392,7 @@ nav ul {
 .proj-img-wrapper-1::before,
 .snip-wrapper-1::before {
   content: "";
-  background: $ubuntu-dark;
+  background: rgba(255, 255, 255, 0);
   color: $ubuntu-light;
   display: inline-block;
   vertical-align: center;
@@ -592,11 +592,12 @@ nav ul {
 }
 
 @media screen and (max-width: 1300px) {
-  .menu-center,
-  .menu-right {
+  .main-nav .menu-center,
+  .main-nav .menu-right {
     display: none;
   }
   .menu-burger {
+    display: block;
     margin-right: 5%;
   }
   .menu-burger img {

@@ -3,16 +3,22 @@ let contactBtn = document.querySelector(".contact-btn");
 let resumeBtn = document.querySelector(".resume-btn");
 // navigation
 let navMenu = document.querySelector(".menu-center");
-let modalMenu = document.querySelector(".menu-modal");
 let navItems = document.querySelectorAll(".nav-link");
-let navLinks = document.querySelectorAll(".nav-link a");
+let navLinks = document.querySelectorAll(".menu-center .nav-link a");
 let aboutSection = document.getElementById("about");
 let snippetSection = document.getElementById("snippets");
 let projectSection = document.getElementById("projects");
 let contactSection = document.getElementById("contact");
+// burger
+let menuBtn = document.querySelector(".menu-burger");
+let burgerLinks = document.querySelectorAll(".menu-burger .nav-link a");
+let modalMenu = document.getElementById("menuModal");
+let menuContent = document.querySelector(".modal-nav");
+let menuClose = document.getElementsByClassName("close-menu")[0];
 // Resume
 let modal = document.getElementById("resumeModal");
-let span = document.getElementsByClassName("close")[0];
+let modalContent = document.querySelector(".modal-content");
+let resumeClose = document.getElementsByClassName("close")[0];
 // contact form
 let contactForm = document.querySelector(".contact-form");
 let status = document.querySelector(".form-status");
@@ -30,6 +36,8 @@ function scrollTo() {
 }
 
 function scrollToAnchor(e, respond = null) {
+  modalMenu.style.display = "none";
+  menuContent.classList.remove("menu-active");
   const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
 
   e.preventDefault();
@@ -119,7 +127,9 @@ const resizeNav = () => {
     navLinks.forEach((node, i) => {
       let anchorVal;
       let start = node.href.indexOf("#") + 1;
-      anchorVal = node.href.slice(start);
+      anchorVal =
+        node.href.slice(start, start + 1).toUpperCase() +
+        node.href.slice(start + 1);
       node.innerHTML = anchorVal;
       node.setAttribute("title", "");
     });
@@ -210,18 +220,34 @@ contactBtn.onclick = e => {
   }, 100);
 };
 
+menuBtn.onclick = e => {
+  e.preventDefault();
+  openBurger = true;
+  modalMenu.style.display = "block";
+  menuContent.classList.add("menu-active");
+};
+
+menuClose.onclick = e => {
+  openBurger = false;
+  modalMenu.style.display = "none";
+  menuContent.classList.remove("menu-active");
+};
+
 resumeBtn.onclick = e => {
   e.preventDefault();
   modal.style.display = "block";
-  modal.classList.add("modal-active");
+  modalContent.classList.add("modal-active");
 };
-span.onclick = e => {
+resumeClose.onclick = e => {
   modal.style.display = "none";
-  modal.classList.remove("modal-active");
+  modalContent.classList.remove("modal-active");
 };
 window.onclick = e => {
   if (e.target == modal) {
     modal.style.display = "none";
-    modal.classList.remove("modal-active");
+    modalContent.classList.remove("modal-active");
+  } else if (e.target == modalMenu) {
+    modalMenu.style.display = "none";
+    menuContent.classList.remove("menu-active");
   }
 };

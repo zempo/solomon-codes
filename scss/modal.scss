@@ -1,5 +1,5 @@
 .modal,
-.modal-2 {
+.modal-menu {
   display: none;
   position: fixed;
   z-index: 2;
@@ -8,8 +8,15 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+.modal {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-menu {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .modal-content {
@@ -19,6 +26,51 @@
   border: 1px solid #888;
   width: 80%;
   height: 90vh;
+}
+
+.modal-nav {
+  background: rgb(0, 0, 0);
+  color: rgb(250, 250, 250);
+  text-decoration: none;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  -o-animation: expandOut 0.25s ease;
+  -moz-animation: expandOut 0.25s ease;
+  -webkit-animation: expandOut 0.25s ease;
+  animation: expandOut 0.25s ease;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.menu-modal-list ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.menu-modal-list a {
+  font-size: calc(5.5rem + 1vw);
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(250, 250, 250);
 }
 
 .modal-active {
@@ -35,9 +87,20 @@
 .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
   font-weight: normal;
+}
+
+.close-menu {
+  position: absolute;
+  top: 0rem;
+  right: calc(5% + 28px);
+  color: rgb(250, 250, 250);
+  font-size: 50px;
+  font-weight: bold;
+  font-weight: normal;
+  z-index: 2;
 }
 
 .close:hover,
