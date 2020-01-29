@@ -112,7 +112,8 @@
 .menu-burger {
   cursor: pointer; }
 
-.menu-burger img {
+.menu-burger img,
+.external-links img {
   display: none;
   width: 50px; }
 

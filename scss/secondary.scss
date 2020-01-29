@@ -128,10 +128,12 @@ $ubuntu-x: #eb6637;
   display: flex;
   justify-content: space-evenly;
 }
+
 .menu-burger {
   cursor: pointer;
 }
-.menu-burger img {
+.menu-burger img,
+.external-links img {
   display: none;
   width: 50px;
 }

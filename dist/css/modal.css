@@ -56,15 +56,21 @@
   -ms-flex-align: center;
   align-items: center; }
 
-.menu-modal-list ul {
+.local-links ul {
   padding-left: 0;
   list-style-type: none; }
 
-.menu-modal-list a {
-  font-size: calc(5.5rem + 1vw);
+.local-links a {
+  font-size: calc(3rem + 1vw);
   font-weight: bold;
   text-decoration: none;
   color: #fafafa; }
+
+.external-links {
+  border: 2px solid #fafafa;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
 
 .modal-active {
   -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;

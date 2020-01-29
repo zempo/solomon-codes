@@ -170,7 +170,8 @@ main {
 .snippets-l,
 .about-l {
   height: auto;
-  border-bottom: none; }
+  border-bottom: none;
+  outline: none; }
 
 .project-r,
 .snippets-r,
@@ -178,7 +179,8 @@ main {
   border-top: none;
   height: auto;
   padding: 0 16vw;
-  text-align: justify; }
+  text-align: justify;
+  outline: none; }
 
 .project-l,
 .snippets-l {
