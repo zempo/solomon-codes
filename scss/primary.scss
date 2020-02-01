@@ -68,12 +68,14 @@ label,
 
 input,
 textarea {
-  width: 75%;
-  padding: 0.5rem;
+  width: 70%;
+  text-indent: 10px;
+  padding: 0.5rem 0;
   border: 1px solid black;
   border-radius: 5px;
   font-size: 22px;
-  margin: 2rem;
+  margin: 2rem 0;
+  font: $font-1;
 }
 
 textarea {
@@ -94,12 +96,17 @@ button:hover,
 a:hover {
   cursor: pointer;
 }
+.contact-btn,
+.resume-btn {
+  background: none;
+}
 
-.btn {
+.btn,
+.btn-5 {
   font-size: 30px;
   font-family: $font-1;
   padding: 0.5rem 1.5rem;
-  background: none;
+  // background: none;
   border: 2px solid $main-txt;
   margin: 0.5rem;
   overflow: hidden;
@@ -316,7 +323,8 @@ main {
   }
   .project-r,
   .snippets-r,
-  .about-r {
+  .about-r,
+  .contact {
     padding: 0 40px;
   }
 }

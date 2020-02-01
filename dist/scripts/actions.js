@@ -144,42 +144,51 @@ function handleContactForm(e) {
   let validEmail = eVal.length > 5 && eVal.includes("@") && eVal.includes(".");
   let validSubject = sVal.length >= 3;
   let validMessage = mVal.length >= 5;
-
+  status.classList.remove("warn");
   if (!validEmail && validSubject && validMessage) {
     e.preventDefault();
+    status.classList.add("warn");
     status.innerHTML = `<p>Please enter your email in this format: <br/> yourname@example.com</p>`;
   } else if (!validEmail && !validSubject && validMessage) {
     e.preventDefault();
+    status.classList.add("warn");
     status.innerHTML = `<p>Please enter your email in this format: <br/> yourname@example.com</p>
           <p>Subject should be 3+ characters.</p>`;
   } else if (!validEmail && validSubject && !validMessage) {
     e.preventDefault();
+    status.classList.add("warn");
     status.innerHTML = `<p>Please enter your email in this format: <br/> yourname@example.com</p>
           <p>Message should be 5+ characters.</p>`;
   } else if (!validEmail && !validSubject && !validMessage) {
     e.preventDefault();
+    status.classList.add("warn");
     status.innerHTML = `<p>Please enter your email in this format: <br/> yourname@example.com</p>
           <p>Subject should be 3+ characters.</p>
           <p>Message should be 5+ characters.</p>`;
   } else if (validEmail && !validSubject && !validMessage) {
     e.preventDefault();
+    status.classList.add("warn");
     status.innerHTML = `<p>Subject should be 3+ characters.</p>
           <p>Message should be 5+ characters.</p>`;
   } else if (validEmail && validSubject && !validMessage) {
     e.preventDefault();
+    status.classList.add("warn");
     status.innerHTML = `<p>Message should be 5+ characters.</p>`;
   } else if (validEmail && !validSubject && validMessage) {
     e.preventDefault();
+    status.classList.add("warn");
     status.innerHTML = `<p>Subject should be 3+ characters.</p>`;
   } else {
     status.innerHTML = `<p>Your Message Was Sent Successfully! <br/> We'll be in contact, shortly!</p>`;
   }
-
   setTimeout(() => {
-    // clear notification
     status.innerHTML = "";
-  }, 3000);
+  }, 5000);
 }
+
+status.onclick = e => {
+  status.innerHTML = "";
+};
 
 contactForm.addEventListener("submit", handleContactForm);
 

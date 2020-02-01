@@ -61,16 +61,21 @@
   list-style-type: none; }
 
 .local-links a {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(2.5rem + 4vw);
   font-weight: bold;
   text-decoration: none;
-  color: #fafafa; }
+  color: #fafafa;
+  z-index: 2.5; }
+
+.external-links img {
+  width: 50px;
+  padding: 0.5rem; }
 
 .external-links {
-  border: 2px solid #fafafa;
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+  list-style-type: none; }
 
 .modal-active {
   -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;

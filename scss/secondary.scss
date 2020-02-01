@@ -132,8 +132,7 @@ $ubuntu-x: #eb6637;
 .menu-burger {
   cursor: pointer;
 }
-.menu-burger img,
-.external-links img {
+.menu-burger img {
   display: none;
   width: 50px;
 }
@@ -188,8 +187,8 @@ $ubuntu-x: #eb6637;
   border-radius: 50%;
   background: rgb(250, 250, 250);
   z-index: 2;
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
   margin-bottom: 15vh;
 }
 
@@ -554,17 +553,71 @@ $ubuntu-x: #eb6637;
   left: 0px;
 }
 // form submission
-
+.contact-form {
+  // width: 100%;
+  border: 2px solid $ubuntu-dark;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  // background: black;
+  // color: rgb(250, 250, 250);
+}
 // as wide as form
 .form-status {
-  width: 100%;
+  width: calc(70% - 1.4rem);
   height: auto;
-  background: green;
+  background: rgba(0, 197, 89, 0.8);
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
   text-align: center;
+  margin: 0.7rem auto;
+  // padding: 0.5rem;
+  position: relative;
+}
+.form-status::after {
+  content: "x";
+  font-size: 35px;
+  position: absolute;
+  top: calc(20px - 1.5rem);
+  right: 20px;
+  color: $ubuntu-dark;
+  font-weight: bold;
+}
+.form-status:empty::after {
+  content: "";
+  font-size: 0px;
+}
+.form-status:empty {
+  border: none;
+}
+.contact .warn {
+  background: rgba(211, 214, 18, 0.8);
 }
 
+.contact-form .btn-send {
+  width: 50%;
+  border-radius: 5px;
+  border: 2px solid black;
+  background: rgb(250, 250, 250);
+  color: black;
+  -moz-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  -o-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  -webkit-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.contact-form .btn-send:active,
+.btn-send:hover {
+  background: black;
+  color: rgb(250, 250, 250);
+  -moz-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  -o-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  -webkit-transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+  transition: all 0.4s cubic-bezier(0.75, 0, 0.125, 1);
+}
 .form-status:empty {
-  // background: rgb(255, 255, 255);
   height: 0px;
 }
 
@@ -593,7 +646,7 @@ $ubuntu-x: #eb6637;
   }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1600px) {
   .main-nav .menu-center,
   .main-nav .menu-right {
     display: none;
