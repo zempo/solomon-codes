@@ -100,7 +100,7 @@ const loadSnippets = snippets => {
     <div class="snip-wrapper-1">
     <img class="snip-img" src="img/${snip.type}.svg" alt="${snip.type}" info="${snip.link}" />
     <button class="btn-4"><span>View Snippet</span></button>
-    </div>
+    </div> 
     </div>
     </li>`;
   });
