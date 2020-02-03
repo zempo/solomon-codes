@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "FullStack Developer based in CA, USA.",
   "main": "main.js",
-  "homepage": "https://zempo.github.io/Solomon_Codes",
+  "homepage": "https://zempo.github.io/solomon-codes",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
@@ -20,7 +20,7 @@
   "author": "Solomon Zelenko",
   "license": "MIT",
   "dependencies": {
-    "gh-pages": "^2.1.1",
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.12.0"
   }
 }
