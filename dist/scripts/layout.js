@@ -98,7 +98,7 @@ const loadSnippets = snippets => {
     <h3 class="snip-h">${snip.title}</h3>
     <div class="snip-wrapper-2">
     <div class="snip-wrapper-1">
-    <img class="snip-img" src="/images/${snip.type}.svg" alt="${snip.type}" info="${snip.link}" />
+    <img class="snip-img" src="/dist/images/${snip.type}.svg" alt="${snip.type}" info="${snip.link}" />
     <button class="btn-4"><span>View Snippet</span></button>
     </div>
     </div>
@@ -124,7 +124,7 @@ const loadProjects = projects => {
     <h2>${proj.title}</h2>
     <div class="proj-img-wrapper-2">
     <div class="proj-img-wrapper-1">
-    <img class="proj-img" src="/images/${proj.pics[0]}" alt="${
+    <img class="proj-img" src="/dist/images/${proj.pics[0]}" alt="${
       proj.title
     } image"/>
     <button class="btn-2"><span>Learn More</span></button>
@@ -166,10 +166,10 @@ const loadProjects = projects => {
 
   projImgs.forEach((pImg, i) => {
     projSpans[i].addEventListener("mouseover", e => {
-      pImg.setAttribute("src", `/images/${currentProjects[i].pics[1]}`);
+      pImg.setAttribute("src", `/dist/images/${currentProjects[i].pics[1]}`);
     });
     projSpans[i].addEventListener("focus", e => {
-      pImg.setAttribute("src", `/images/${currentProjects[i].pics[1]}`);
+      pImg.setAttribute("src", `/dist/images/${currentProjects[i].pics[1]}`);
     });
     projBtns[i].addEventListener("click", e => {
       projInfo[i].style.display = "block";
@@ -184,16 +184,16 @@ const loadProjects = projects => {
       }, 350);
     });
     projBtns[i].addEventListener("mouseover", e => {
-      pImg.setAttribute("src", `/images/${currentProjects[i].pics[1]}`);
+      pImg.setAttribute("src", `/dist/images/${currentProjects[i].pics[1]}`);
     });
     projBtns[i].addEventListener("focus", e => {
-      pImg.setAttribute("src", `/images/${currentProjects[i].pics[1]}`);
+      pImg.setAttribute("src", `/dist/images/${currentProjects[i].pics[1]}`);
     });
     projBtns[i].addEventListener("mouseout", e => {
-      pImg.setAttribute("src", `/images/${currentProjects[i].pics[0]}`);
+      pImg.setAttribute("src", `/dist/images/${currentProjects[i].pics[0]}`);
     });
     projBtns[i].addEventListener("blur", e => {
-      pImg.setAttribute("src", `/images/${currentProjects[i].pics[0]}`);
+      pImg.setAttribute("src", `/dist/images/${currentProjects[i].pics[0]}`);
     });
   });
 };
