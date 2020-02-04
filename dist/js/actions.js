@@ -26,14 +26,15 @@ let email = document.getElementById("email");
 let subject = document.getElementById("sub");
 let message = document.getElementById("msg");
 
-function scrollTo() {
+const scrollTo = e => {
+  console.log("test");
   const links = document.querySelectorAll("nav a");
   links.forEach(link => {
     if (!link.href.includes("https")) {
       link.onclick = scrollToAnchor;
     }
   });
-}
+};
 
 function scrollToAnchor(e, respond = null) {
   modalMenu.style.display = "none";
@@ -193,7 +194,6 @@ status.onclick = e => {
 contactForm.addEventListener("submit", handleContactForm);
 
 window.onload = e => {
-  console.log("load");
   scrollTo(e);
 };
 
