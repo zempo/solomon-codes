@@ -26,15 +26,14 @@ let email = document.getElementById("email");
 let subject = document.getElementById("sub");
 let message = document.getElementById("msg");
 
-const scrollTo = e => {
-  console.log("test");
+function scrollTo() {
   const links = document.querySelectorAll("nav a");
   links.forEach(link => {
-    if (!link.href.includes("https")) {
+    if (link.href.includes("solomon-codes")) {
       link.onclick = scrollToAnchor;
     }
   });
-};
+}
 
 function scrollToAnchor(e, respond = null) {
   modalMenu.style.display = "none";
@@ -194,7 +193,7 @@ status.onclick = e => {
 contactForm.addEventListener("submit", handleContactForm);
 
 window.onload = e => {
-  scrollTo(e);
+  scrollTo();
 };
 
 window.onscroll = e => {
