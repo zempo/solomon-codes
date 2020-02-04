@@ -4,7 +4,8 @@ _Live Site: [Here](https://zempo.github.io/solomon-codes/#contact)_
 
 ## Contact
 
-Business Number: (425)-200-4403 
+Business Number: (425)-200-4403
+
 Linkedin: [Here](https://www.linkedin.com/in/solomon-zelenko/)
 
 ## About
