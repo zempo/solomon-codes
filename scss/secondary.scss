@@ -568,23 +568,23 @@ $ubuntu-x: #eb6637;
 .form-status {
   width: calc(70% - 1.4rem);
   height: auto;
-  background: rgba(0, 197, 89, 0.8);
+  background: rgb(24, 187, 97);
   border: 1px solid black;
   border-radius: 5px;
-  color: black;
+  color: rgba(250, 250, 250, 0.95);
   text-align: center;
-  margin: 0.7rem auto;
-  // padding: 0.5rem;
+  font-weight: bold;
+  margin: 0.9rem auto;
   position: relative;
 }
 .form-status::after {
   content: "x";
   font-size: 35px;
   position: absolute;
-  top: calc(20px - 1.5rem);
-  right: 20px;
-  color: $ubuntu-dark;
-  font-weight: bold;
+  top: -5px;
+  right: 15px;
+  color: rgba(250, 250, 250, 0.95);
+  font-weight: normal;
 }
 .form-status:empty::after {
   content: "";
@@ -594,7 +594,7 @@ $ubuntu-x: #eb6637;
   border: none;
 }
 .contact .warn {
-  background: rgba(211, 214, 18, 0.8);
+  background: #ff6700;
 }
 
 .contact-form .btn-send {
@@ -641,9 +641,7 @@ $ubuntu-x: #eb6637;
   .proj ul {
     padding: 15px;
   }
-}
 
-@media screen and (max-width: 1600px) {
   .main-nav {
     justify-content: space-between;
   }
@@ -679,6 +677,31 @@ $ubuntu-x: #eb6637;
 }
 
 @media screen and (max-width: 1000px) {
+  .form-status {
+    width: 90%;
+  }
+  .logo-main {
+    margin-top: 10rem;
+  }
+  .form-status::after {
+    font-size: 25px;
+    font-weight: normal;
+    top: -5px;
+    right: 10px;
+  }
+
+  .snip-wrapper-2 {
+    position: relative;
+    width: 60%;
+    // padding: 10px;
+    margin-left: 20%;
+  }
+  .snippets-list {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
   .prof-img {
     -moz-transform: scale(0.9);
     -o-transform: scale(0.9);
@@ -751,9 +774,42 @@ $ubuntu-x: #eb6637;
     width: 100%;
     text-align: center;
   }
+  .contact-form .btn-send {
+    width: 60%;
+  }
+
+  .btn-2 span,
+  .btn-3 span,
+  .btn-4 span {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .logo-main {
+    margin-top: 12rem;
+  }
+  .contact-form .btn-send {
+    width: 80%;
+  }
+  .form-status {
+    width: 90%;
+    font-size: 15px;
+    padding-top: 0.8rem;
+  }
+  .form-status:empty {
+    padding-top: 0;
+  }
+  .snip-wrapper-2 {
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .snippets-list {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 100%;
+  }
   .menu-left {
     font-size: 16px;
   }
@@ -778,5 +834,11 @@ $ubuntu-x: #eb6637;
     top: -7px;
     left: 0;
     width: 100%;
+  }
+
+  .btn-2 span,
+  .btn-3 span,
+  .btn-4 span {
+    font-size: 16px;
   }
 }

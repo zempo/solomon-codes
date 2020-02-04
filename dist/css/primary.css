@@ -88,6 +88,9 @@ a:hover {
   overflow: hidden;
   position: relative; }
 
+.resume-btn {
+  margin-bottom: 10rem; }
+
 .btn::before {
   content: attr(data-text);
   position: absolute;
@@ -268,7 +271,7 @@ main {
     font-size: 24px; }
   input,
   textarea {
-    width: 95%;
+    width: 90%;
     font-size: 18px; } }
 
 @media screen and (max-width: 600px) {
@@ -278,7 +281,7 @@ main {
     text-align: center; }
   .big-h {
     font-weight: bold;
-    font-size: calc(4rem + 1vw); }
+    font-size: calc(3rem + 2vw); }
   .lil-h {
     font-weight: normal;
     font-size: calc(2rem + 2vw); }
@@ -302,4 +305,5 @@ main {
     font-size: 20px; }
   input,
   textarea {
-    width: 95%; } }
+    width: 95%;
+    font-size: 15px; } }

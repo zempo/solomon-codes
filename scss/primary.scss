@@ -107,6 +107,9 @@ a:hover {
   overflow: hidden;
   position: relative;
 }
+.resume-btn {
+  margin-bottom: 10rem;
+}
 
 .btn::before {
   content: attr(data-text);
@@ -344,7 +347,7 @@ main {
   }
   input,
   textarea {
-    width: 95%;
+    width: 90%;
     font-size: 18px;
   }
 }
@@ -358,7 +361,7 @@ main {
   }
   .big-h {
     font-weight: bold;
-    font-size: calc(4rem + 1vw);
+    font-size: calc(3rem + 2vw);
   }
   .lil-h {
     font-weight: normal;
@@ -389,5 +392,6 @@ main {
   input,
   textarea {
     width: 95%;
+    font-size: 15px;
   }
 }
