@@ -1,8 +1,10 @@
 # Solomon Codes
 
-_Portfolio: [Here](https://zempo.github.io/solomon-codes/#contact)_
+_Live Portfolio: [Here](https://zempo.github.io/solomon-codes/#contact)_
 
-## Contact?
+## Contact
+
+Business Number:
 
 ## Blog?
 
