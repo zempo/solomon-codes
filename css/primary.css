@@ -145,6 +145,9 @@ main {
   grid-area: ar;
   line-height: 1.75; }
 
+.about-r h1 {
+  text-align: center; }
+
 .about-r p {
   margin-bottom: 40px; }
 

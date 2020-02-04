@@ -54,7 +54,7 @@ const currentProjects = [
 const currentSnippets = [
   {
     type: "animation",
-    title: "Cloud Landing (Css)",
+    title: "Cloudy Landing Page",
     link: "https://codepen.io/zemposPen/pen/bGNQmgX"
   },
   {
@@ -63,15 +63,20 @@ const currentSnippets = [
     link:
       "https://medium.com/@solomonzelenko/expedite-your-eurekas-704d35c7892a"
   },
-  {
+  { 
     type: "animation",
-    title: "Greeting Card (Css)",
+    title: "Lively Greeting Cards",
     link: "https://codepen.io/zemposPen/pen/PowLbBd"
   },
   {
     type: "algo",
-    title: "Max Arr Sum",
+    title: "Maximum Array Sum",
     link: "https://repl.it/@zempo1/Max-Arr-Sum"
+  },
+  {
+    type: "animation",
+    title: "React Quotes Loader",
+    link: "https://stackblitz.com/edit/quote-loader"
   },
   {
     type: "algo",
@@ -80,7 +85,7 @@ const currentSnippets = [
   },
   {
     type: "algo",
-    title: "Memoize Fibonacci",
+    title: "Memo-ize Fibonacci",
     link: "https://repl.it/@zempo1/memo"
   },
   {
@@ -152,7 +157,8 @@ const loadProjects = projects => {
     <span>Hide Text</span> 
     </button> 
     </ul>
-    </li>`;
+    </li>
+    <br/>`;
   });
   container.innerHTML = input;
   // projects section
