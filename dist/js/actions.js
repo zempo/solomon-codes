@@ -193,7 +193,8 @@ status.onclick = e => {
 contactForm.addEventListener("submit", handleContactForm);
 
 window.onload = e => {
-  scrollTo();
+  console.log("load");
+  scrollTo(e);
 };
 
 window.onscroll = e => {
