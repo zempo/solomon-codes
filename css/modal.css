@@ -61,11 +61,11 @@
   list-style-type: none; }
 
 .local-links a {
-  font-size: calc(2.5rem + 4vw);
+  font-size: calc(6vh + 3vw);
   font-weight: bold;
   text-decoration: none;
   color: #fafafa;
-  z-index: 2.5; }
+  cursor: pointer; }
 
 .external-links img {
   width: 50px;
@@ -107,3 +107,7 @@
   color: black;
   text-decoration: none;
   cursor: pointer; }
+
+@media screen and (max-width: 900px) {
+  .local-links a {
+    font-size: calc(5vh + 3vw); } }
