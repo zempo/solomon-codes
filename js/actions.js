@@ -29,7 +29,7 @@ let message = document.getElementById("msg");
 function scrollTo() {
   const links = document.querySelectorAll("nav a");
   links.forEach(link => {
-    if (link.href.includes("solomon-codes")) {
+    if (link.href.includes("solomonzelenko")) {
       link.onclick = scrollToAnchor;
     }
   });
