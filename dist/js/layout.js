@@ -63,14 +63,14 @@ const currentSnippets = [
     link:
       "https://medium.com/@solomonzelenko/expedite-your-eurekas-704d35c7892a"
   },
-  { 
+  {
     type: "animation",
     title: "Lively Greeting Cards",
     link: "https://codepen.io/zemposPen/pen/PowLbBd"
   },
   {
     type: "algo",
-    title: "Maximum Array Sum",
+    title: "Max Arr Sum",
     link: "https://repl.it/@zempo1/Max-Arr-Sum"
   },
   {
@@ -84,14 +84,34 @@ const currentSnippets = [
     link: "https://repl.it/@zempo1/Mad-Mazes"
   },
   {
+    type: "animation",
+    title: "React Boilerplate",
+    link: "https://github.com/zempo/react-boilerplate"
+  },
+  {
     type: "algo",
     title: "Memo-ize Fibonacci",
     link: "https://repl.it/@zempo1/memo"
   },
   {
+    type: "animation",
+    title: "Node Boilerplate",
+    link: "https://github.com/zempo/node_boilerplate"
+  },
+  {
     type: "algo",
     title: "Sort by Date",
     link: "https://repl.it/@zempo1/sort-by-date"
+  },
+  {
+    type: "animation",
+    title: "Svelte Boilerplate",
+    link: "https://github.com/zempo/svelte-boiler"
+  },
+  {
+    type: "animation",
+    title: "Sapper Boilerplate",
+    link: "https://github.com/zempo/sapper-boiler"
   }
 ];
 
