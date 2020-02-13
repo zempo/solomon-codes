@@ -65,7 +65,7 @@ const currentSnippets = [
   },
   {
     type: "animation",
-    title: "Lively Greeting Cards",
+    title: "JTO Cards",
     link: "https://codepen.io/zemposPen/pen/PowLbBd"
   },
   {
