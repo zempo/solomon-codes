@@ -193,6 +193,8 @@ status.onclick = e => {
 contactForm.addEventListener("submit", handleContactForm);
 
 window.onload = e => {
+  modal.style.display = "none";
+  modalContent.classList.remove("modal-active");
   scrollTo();
 };
 
