@@ -31,11 +31,7 @@ const currentProjects = [
       "Mocha, and",
       " Netlify"
     ],
-    libs: [
-      "Cloudinary, ",
-      "Amazon's Image Moderation AI, ",
-      "and React to Print"
-    ],
+    libs: ["Cloudinary, ", "AWS Image Moderation, ", "and React to Print"],
     repo: "https://github.com/zempo/jto-client",
     live: "https://just-the-occasion.netlify.com/"
   },
@@ -65,13 +61,13 @@ const currentSnippets = [
   },
   {
     type: "animation",
-    title: "JTO Cards",
+    title: "Just the Occasion Concept",
     link: "https://codepen.io/zemposPen/pen/PowLbBd"
   },
   {
     type: "algo",
-    title: "Max Arr Sum",
-    link: "https://repl.it/@zempo1/Max-Arr-Sum"
+    title: "Above the Line Concept",
+    link: "https://stackblitz.com/edit/above-the-line-concept"
   },
   {
     type: "animation",
