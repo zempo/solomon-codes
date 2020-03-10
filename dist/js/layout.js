@@ -65,7 +65,7 @@ const currentSnippets = [
     link: "https://codepen.io/zemposPen/pen/PowLbBd"
   },
   {
-    type: "algo",
+    type: "animation",
     title: "Above the Line Concept",
     link: "https://stackblitz.com/edit/above-the-line-concept"
   },
