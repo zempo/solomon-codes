@@ -33,7 +33,7 @@ const currentProjects = [
     ],
     libs: ["Cloudinary, ", "AWS Image Moderation, ", "and React to Print"],
     repo: "https://github.com/zempo/jto-client",
-    live: "https://just-the-occasion.netlify.com/"
+    live: "https://just-the-occasion.com/"
   },
   {
     title: "Aeropolis",
